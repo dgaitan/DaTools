@@ -1,6 +1,8 @@
 /*Framework Beta*/
 /*Normalize*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*Fuentes*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Alegreya|Source+Sans+Pro);
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -83,6 +85,7 @@ h1 {
 h1,h2,h3,h4,h5,h6{
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-family: Open Sans;
 }
 h1{
 	font-size: 36px;
@@ -235,41 +238,9 @@ ul{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-/*Fuentes*/
-@font-face{
-	font-family: 'Amaranth-Bold';
-	src: url('../fonts/amara/Amaranth-Bold.otf') format('truetype');
-}
-@font-face{
-	font-family: 'Amaranth-Regular';
-	src: url('../fonts/amara/Amaranth-Regular.otf') format('truetype');
-}
-@font-face{
-	font-family: 'Comics';
-	src: url('../fonts/comics/SpaceComics.ttf') format('truetype');
-}
-@font-face{
-	font-family: 'Opensans-Bold';
-	src: url('../fonts/open/OpenSans-Bold.ttf') format('truetype');
-}
-@font-face{
-	font-family: 'Opensans-Regular';
-	src: url('../fonts/open/OpenSans-Regular.ttf') format('truetype');
-}
-@font-face{
-	font-family: 'Panpizza';
-	src: url('../fonts/panpizza/panpizza.ttf') format('truetype');
-}
-@font-face{
-	font-family: 'Raleway-Regular';
-	src: url('../fonts/raleway/Raleway-Light.ttf') format('truetype');
-}
-@font-face{
-	font-family: 'Raleway-Bold';
-	src: url('../fonts/raleway/Raleway-Black.ttf') format('truetype');
-}
+
 body{
-	font-family: Opensans-Regular;
+	font-family: Open sans;
 }
 /*iconos*/
 @font-face {
