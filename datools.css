@@ -2737,3 +2737,7 @@ body{
 .text-justify{
 	text-align: justify;
 }
+/*solo estilos*/
+.text-sorf{
+	width: 100%;
+}
