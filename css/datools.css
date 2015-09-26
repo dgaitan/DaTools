@@ -240,7 +240,11 @@ ul{
 }
 
 body{
+<<<<<<< HEAD
 	font-family: Open sans;
+=======
+	font-family: Open Sans;
+>>>>>>> master
 }
 /*iconos*/
 @font-face {
