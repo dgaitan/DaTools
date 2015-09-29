@@ -1,0 +1,14 @@
+/*grid container principal*/
+
+/*you can change this value, the initial value is 1170px*/
+.container{
+	max-width: 1170px;
+	margin: 0 auto;
+
+	/*before and after for clean the float of the column*/
+	&:before, &:after{
+		clear: both;
+		content: "";
+		display: table;	
+	}
+}
