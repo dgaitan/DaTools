@@ -1979,5 +1979,67 @@ body {
   .large-1 {
     width: 8.33333333%;
     float: left; } }
+/*botones*/
+/*
+* Estilos de los botones de datools
+* en esto encontramos diferentes tipos de botones
+* el cual iremos agregando cualquier cantidad de botones 
+* para que puedan ser utilizados facilmente desde cualquier diseño
+*
+* Para cada nuevo diseño de boton se recomienda usar el siguiente orden para la nombre de la clase:
+* Objeto ------ tipo -----  tamaño ----- color
+* button ------ single ---  little ----- blue
+*
+* En el ejemplo anterior se muestra que para crear un boton se recomienda tener primero el objeto que en
+* este caso seria un button, luego el tipo de boton, en este caso es single, que quiere decir que es
+* un boton super sencillo, luego seguido del tamaño, en este caso de little, esto quiere decir que el boton 
+* es pequeño, en este campo se recomienda usar los siguientes prefijos (little, small, medium, large), y por
+* ultimo se selecciona el color de boton.
+*
+* El prefijo final de todo esto seria: <button type="button" class="button-single-little-blue">Botón</button>
+*
+* Para cada botón creado, se debe decir quien lo creó.
+*/
+/*  Button single
+*   Create: David Gaitán
+*/
+.button-single-little-blue, .button-single-small-blue, .button-single-medium-blue, .button-single-large-blue, .button-bottom-little-blue, .button-bottom-small-blue, .button-bottom-medium-blue, .button-bottom-large-blue {
+  display: inline-block;
+  background-color: #0D47A1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #FFF;
+  font-family: arial;
+  transition: all .3s; }
+  .button-single-little-blue:hover, .button-single-small-blue:hover, .button-single-medium-blue:hover, .button-single-large-blue:hover, .button-bottom-little-blue:hover, .button-bottom-small-blue:hover, .button-bottom-medium-blue:hover, .button-bottom-large-blue:hover {
+    background-color: #1A237E; }
+
+.button-single-small-blue {
+  padding: 12px 35px; }
+
+.button-single-medium-blue {
+  padding: 15px 45px; }
+
+.button-single-large-blue {
+  padding: 17px 60px; }
+
+/*
+* Button bottom
+* Create: David Gaitan
+*/
+.button-bottom-little-blue, .button-bottom-small-blue, .button-bottom-medium-blue, .button-bottom-large-blue {
+  border-bottom: 4px solid #181F71;
+  border-radius: 6px; }
+
+.button-bottom-small-blue {
+  padding: 12px 35px; }
+
+.button-bottom-medium-blue {
+  padding: 15px 45px; }
+
+.button-bottom-large-blue {
+  padding: 17px 60px; }
 
 /*# sourceMappingURL=datool.css.map */
