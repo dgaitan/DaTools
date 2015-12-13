@@ -4346,7 +4346,8 @@ img {
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  outline: 0; }
+  outline: 0;
+  /*soy un comentario desde gh-pages*/ }
   .button.red-full {
     background-color: #f44336;
     color: #FFF;
