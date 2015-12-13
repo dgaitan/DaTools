@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   color: #505050;
-  font-size: 14px;
+  font-size: $body-font-size;
 }
 a{
 	text-decoration: none;
@@ -56,6 +56,8 @@ template {
 }
 a {
   background-color: transparent;
+  @if $a-font != '' { font-family: $a-font; }
+  @if $a-size != '' { font-size: $a-size; }
 }
 a:active,
 a:hover {
@@ -74,35 +76,40 @@ dfn {
 button{
 	overflow: visible;
 }
-h1 {
-  margin: .67em 0;
-  font-size: 2em;
-}
 h1,h2,h3,h4,h5,h6{
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-family: Open Sans;
+  font-weight: 700;
 }
 h1{
-	font-size: 36px;
+	font-size: $h1-size;
+  font-family: $h1-font;
 }
 h2{
-	font-size: 30px;
+	font-size: $h2-size;
+  font-family: $h2-font;
 }
 h3{
-	font-size: 24px;
+	font-size: $h3-size;
+  font-family: $h3-font;
 }
 h4{
-	font-size: 18px;
+	font-size: $h4-size;
+  font-family: $h4-font;
 }
 h5{
-	font-size: 14px;
+	font-size: $h5-size;
+  font-family: $h5-font;
 }
 h6{
-	font-size: 12px;
+	font-size: $h6-size;
+  font-family: $h6-font;
 }
 p{
 	margin-bottom: 10px;
+  margin-top: 10px;
+  @if $p-font != '' { font-family: $p-font; }
+  @if $p-size != '' { font-size: $p-size; }
 }
 mark {
   color: #000;
@@ -125,7 +132,6 @@ sub {
   bottom: -.25em;
 }
 img {
-  border: 0;
   max-width: 100%;
   height: auto;
 }
