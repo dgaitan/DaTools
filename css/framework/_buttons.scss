@@ -8,11 +8,32 @@
 	border: 1px solid #a3a3a3;
 	padding: 5px 25px;
 	color: #202020;
-	font-size: 1rem;
+	font-size: .9rem;
 	@if $button-font != '' {font-family: $button-font};
 	display: inline-block;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	border-radius: 5px;
 	outline: 0;
+
+	@each $col, $valor in $color-general{
+		&.#{$col}-full{
+			background-color: #{$valor};
+			color: #FFF;
+			border: none;
+		}
+	}
+	@each $col, $valor in $color-general{
+		&.#{$col}-border{
+			background-color: transparent;
+			color: #{$valor};
+			border: 2px solid #{$valor};
+			border-radius: 5px;
+			transition: all .3s;
+			&:hover{
+				background-color: #{$valor};
+				color: #FFF;
+			}
+		}
+	}
 }
