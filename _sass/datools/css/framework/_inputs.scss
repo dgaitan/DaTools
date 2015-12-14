@@ -1,0 +1,80 @@
+/*
+	Inputs
+*/
+
+.input{
+	width: 100%;
+	border-radius: 5px;
+	color: #202020;
+	background-color: transparent !important;
+	border: 1px solid #ccc;
+	padding: 10px 15px;
+	font-size: 1rem;
+	@if $input-font != '' {font-family: $input-font;}
+	outline: 0;
+	margin-bottom: 15px;
+	display: block;
+	transition: all .3s;
+
+	&:focus{
+		border: 1px solid #848484;
+	}
+}
+
+.input-cube{
+	@extend .input;
+	border-radius: 0px;
+}
+.input-radius{
+	@extend .input;
+	border-radius: 25px;
+}
+.input-bold{
+	@extend .input;
+	border: 3px solid #ccc;
+
+	&:focus{
+		border: 3px solid #848484;
+	}
+}
+.input-line{
+	@extend .input;
+	border: 0px;
+	border-bottom: 2px solid #ccc;
+	border-radius: 0px;
+
+	&:focus{
+		border: 0px;
+		border-bottom: 2px solid #848484;
+	}
+}
+/*
+	Forms
+*/
+.form{
+	width: 100%;
+	display: block;
+
+	&:after, &:before{
+		clear: both;
+		display: table;
+		content: "";
+	}
+}
+
+@for $i from 1 through $form-column{
+	.form-column-#{$i}{
+		width: (100% / $i);
+		float: left;
+		padding-left: $padding;
+		padding-right: $padding;
+	}
+}
+@media (max-width: 600px){
+	@for $i from 1 through $form-column{
+		.form-column-#{$i}{
+			width: 100%;
+			float: left;
+		}
+	}		
+}

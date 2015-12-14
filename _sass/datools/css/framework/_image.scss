@@ -1,0 +1,24 @@
+/*
+	Imagenes setup
+*/
+img{
+	position: relative;
+	display: inline-block;
+	vertical-align: bottom;
+}
+.img-circle{
+	border-radius: 50%;
+}
+.img-border{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 4px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+	line-height: 1.42857143;
+}
+.img-radius{
+	border-radius: 5px;
+}
