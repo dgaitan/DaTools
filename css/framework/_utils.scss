@@ -1,0 +1,44 @@
+/*
+	Margenes predefinidos
+*/
+$margen-prefix : (
+	l :	$l-space,
+	m : $m-space,
+	s : $s-space,
+	li : $li-space
+	);
+
+@each $prefix, $value in $margen-prefix{
+	//ambos margenes	
+	.#{$prefix}-margin{
+		margin-bottom: $value;
+		margin-top: $value;
+	}
+	//margin-top
+	.#{$prefix}-mtop{
+		margin-top: $value;
+	}
+	//margin-bottom
+	.#{$prefix}-mbottom{
+		margin-bottom: $value;
+	}
+}
+
+/*
+	Paddings predefinidos
+*/
+@each $prefix, $value in $margen-prefix{
+	//ambos margenes	
+	.#{$prefix}-padding{
+		padding-bottom: $value;
+		padding-top: $value;
+	}
+	//margin-top
+	.#{$prefix}-ptop{
+		padding-top: $value;
+	}
+	//margin-bottom
+	.#{$prefix}-pbottom{
+		padding-bottom: $value;
+	}
+}

@@ -1,16 +1,24 @@
-/*Framework Beta*/
+/*
+*	Datools by David Gaitán
+*/
 
-/*Fuentes*/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Alegreya|Source+Sans+Pro);
+/*
+*	Orden de la librería
+*	
+*	1. Variables
+*	2. Normalize
+*	3. Iconos
+*	4. Grid
+*	5. botones 
+*	6. Fonts
+*/
 
-/*! normalize DaTools */
-@import 'normalize';
-
-/*icons*/
-@import 'icons';
-
-/*grid*/
-@import 'grid';
-
-/*botones*/
-@import 'botones';
+@import "framework/variables";
+@import "framework/fonts";
+@import "framework/normalize";
+@import "framework/icons";
+@import "framework/grid";
+@import "framework/image";
+@import "framework/inputs";
+@import "framework/utils";
+@import "framework/buttons";
