@@ -1,319 +1,3280 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-  margin: 0;
-  padding: 0; }
-
-/**
- * Basic styling
- */
-body {
-  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: #fdfdfd;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal; }
-
+@charset "UTF-8";
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Lato|Oswald|Lora|Montserrat|Source+Sans+Pro|Raleway|PT+Sans|Ubuntu|PT+Serif|Bitter|Lobster|Playfair+Display|Poiret+One|Nunito|Hind);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
 
-/**
- * Images
- */
-img {
-  max-width: 100%;
-  vertical-align: middle; }
+/*
+	Footer
+*/
+footer.footer {
+  background-color: #2a2730; }
+  footer.footer h4, footer.footer p {
+    color: #FFF; }
+  footer.footer a {
+    color: #FFF;
+    margin-left: 10px;
+    padding-top: 1.3rem;
+    display: inline-block; }
 
-/**
- * Figures
- */
-figure > img {
+/*
+	home
+*/
+/*
+*	Datools by David Gaitán
+*/
+/*
+*	Orden de la librería
+*	
+*	1. Variables
+*	2. Normalize
+*	3. Iconos
+*	4. Grid
+*	5. botones 
+*	6. Fonts
+*/
+/*
+*	Variables generales
+*/
+/*
+*	En caso de que quisieras una fuente adicional para los parrafos, links, botones
+*	inputs agrega el valor, de lo contrario deja un valor vacío
+*/
+/*
+*	En caso de que quisieras un tamaño adicional para los parrafos y links
+*	agrega el valor, de lo contrario deja un valor vacío
+*/
+/*
+*	Datos del grid
+*/
+	/*
+		Breackpoints
+		- Si quieres cambiar los valores de los prefijos, solo cambia el primero valor de array
+		Por ejemplo:
+			$breackpoints:(little : 480px);
+			Por:
+			$breackpoints:(chiquito : 480px);
+
+		- Si quieres agregar una medida custom (una medida más agregada por tí) solamente tienes que añadir los valores dentro de la variable $custom-breackpoint;
+		Por ejemplo:
+			$custom-breackpoint:(
+				mivalor : 1000px;
+			);
+	*/
+/*
+*	Valores de los espacios
+*/
+/*
+	Máxima cantidad de columnas en un formulario
+*/
+/*
+	Paleta de colores (son usados para los botones)
+*/
+/*OF google fonts*/
+/*Of font-awesome*/
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  color: #505050;
+  font-size: 1rem; }
+
+a {
+  text-decoration: none;
+  color: #337ab7; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block; }
 
-figcaption {
-  font-size: 14px; }
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
 
-/**
- * Lists
- */
-ul, ol {
-  margin-left: 30px; }
+audio:not([controls]) {
+  display: none;
+  height: 0; }
 
-li > ul,
-li > ol {
-  margin-bottom: 0; }
+[hidden],
+template {
+  display: none; }
 
-/**
- * Headings
- */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400; }
-
-/**
- * Links
- */
 a {
-  color: #2a7ae2;
-  text-decoration: none; }
-  a:visited {
-    color: #1756a9; }
-  a:hover {
-    color: #111;
-    text-decoration: underline; }
+  background-color: transparent; }
 
-/**
- * Blockquotes
- */
-blockquote {
-  color: #828282;
-  border-left: 4px solid #e8e8e8;
-  padding-left: 15px;
-  font-size: 18px;
-  letter-spacing: -1px;
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
   font-style: italic; }
-  blockquote > :last-child {
-    margin-bottom: 0; }
 
-/**
- * Code formatting
- */
-pre,
-code {
-  font-size: 15px;
-  border: 1px solid #e8e8e8;
-  border-radius: 3px;
-  background-color: #eef; }
+button {
+  overflow: visible; }
 
-code {
-  padding: 1px 5px; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700; }
+
+h1 {
+  font-size: 3rem;
+  font-family: Open Sans; }
+
+h2 {
+  font-size: 2.5rem;
+  font-family: Open Sans; }
+
+h3 {
+  font-size: 2rem;
+  font-family: Open Sans; }
+
+h4 {
+  font-size: 1.8rem;
+  font-family: Open Sans; }
+
+h5 {
+  font-size: 1.5rem;
+  font-family: Open Sans; }
+
+h6 {
+  font-size: 1.2rem;
+  font-family: Open Sans; }
+
+p {
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+mark {
+  color: #000;
+  background: #ff0; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
 
 pre {
-  padding: 8px 12px;
-  overflow-x: auto; }
-  pre > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0; }
+  overflow: auto; }
 
-/**
- * Wrapper
- */
-.wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
-  @media screen and (max-width: 800px) {
-    .wrapper {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
-      padding-right: 15px;
-      padding-left: 15px; } }
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
 
-/**
- * Clearfix
- */
-.wrapper:after, .footer-col-wrapper:after {
-  content: "";
-  display: table;
-  clear: both; }
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit; }
 
-/**
- * Icons
- */
-.icon > svg {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle; }
-  .icon > svg path {
-    fill: #828282; }
+button {
+  overflow: visible; }
 
-/**
- * Site header
- */
-.site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
-  position: relative; }
+button,
+select {
+  text-transform: none; }
 
-.site-title {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 56px;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-  float: left; }
-  .site-title, .site-title:visited {
-    color: #424242; }
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
 
-.site-nav {
-  float: right;
-  line-height: 56px; }
-  .site-nav .menu-icon {
-    display: none; }
-  .site-nav .page-link {
-    color: #111;
-    line-height: 1.5; }
-    .site-nav .page-link:not(:last-child) {
-      margin-right: 20px; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      position: absolute;
-      top: 9px;
-      right: 15px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
-      border-radius: 5px;
-      text-align: right; }
-      .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center; }
-        .site-nav .menu-icon > svg {
-          width: 18px;
-          height: 15px; }
-          .site-nav .menu-icon > svg path {
-            fill: #424242; }
-      .site-nav .trigger {
-        clear: both;
-        display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: block;
-        padding: 5px 10px;
-        margin-left: 20px; }
-        .site-nav .page-link:not(:last-child) {
-          margin-right: 0; } }
+button[disabled],
+html input[disabled] {
+  cursor: default; }
 
-/**
- * Site footer
- */
-.site-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 30px 0; }
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
 
-.footer-heading {
-  font-size: 18px;
-  margin-bottom: 15px; }
+input {
+  line-height: normal; }
 
-.contact-list,
-.social-media-list {
-  list-style: none;
-  margin-left: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
 
-.footer-col-wrapper {
-  font-size: 15px;
-  color: #828282;
-  margin-left: -15px; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
 
-.footer-col {
-  float: left;
-  margin-bottom: 15px;
-  padding-left: 15px; }
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: textfield; }
 
-.footer-col-1 {
-  width: -webkit-calc(35% - (30px / 2));
-  width: calc(35% - (30px / 2)); }
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
 
-.footer-col-2 {
-  width: -webkit-calc(20% - (30px / 2));
-  width: calc(20% - (30px / 2)); }
+fieldset {
+  padding: .35em .625em .75em;
+  margin: 0 2px;
+  border: 1px solid #c0c0c0; }
 
-.footer-col-3 {
-  width: -webkit-calc(45% - (30px / 2));
-  width: calc(45% - (30px / 2)); }
+legend {
+  padding: 0;
+  border: 0; }
 
-@media screen and (max-width: 800px) {
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - (30px / 2));
-    width: calc(50% - (30px / 2)); }
+textarea {
+  overflow: auto; }
 
-  .footer-col-3 {
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2)); } }
-@media screen and (max-width: 600px) {
-  .footer-col {
-    float: none;
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - (30px / 2)); } }
-/**
- * Page content
- */
-.page-content {
-  padding: 30px 0; }
+optgroup {
+  font-weight: bold; }
 
-.page-heading {
-  font-size: 20px; }
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
 
-.post-list {
-  margin-left: 0;
-  list-style: none; }
-  .post-list > li {
-    margin-bottom: 30px; }
+td,
+th {
+  padding: 0; }
 
-.post-meta {
-  font-size: 14px;
-  color: #828282; }
+ul {
+  margin-top: 10px;
+  margin-bottom: 10px; }
 
-.post-link {
+body {
+  font-family: Open Sans; }
+
+/*
+*	Grid versión 1.2
+*	
+*	Contributors: David Gaitán.
+*/
+.container, .container-all, .container-full {
+  max-width: 1100px;
   display: block;
-  font-size: 24px; }
+  margin: 0 auto; }
+  .container:before, .container-all:before, .container-full:before, .container:after, .container-all:after, .container-full:after {
+    clear: both;
+    display: table;
+    content: ""; }
 
-/**
- * Posts
- */
-.post-header {
-  margin-bottom: 30px; }
+.container-all {
+  padding-left: 1%;
+  padding-right: 1%;
+  width: 100%;
+  max-width: 100%; }
 
-.post-title {
-  font-size: 42px;
-  letter-spacing: -1px;
-  line-height: 1; }
-  @media screen and (max-width: 800px) {
-    .post-title {
-      font-size: 36px; } }
+.container-full {
+  width: 100%;
+  max-width: 100%; }
 
-.post-content {
-  margin-bottom: 30px; }
-  .post-content h2 {
-    font-size: 32px; }
-    @media screen and (max-width: 800px) {
-      .post-content h2 {
-        font-size: 28px; } }
-  .post-content h3 {
-    font-size: 26px; }
-    @media screen and (max-width: 800px) {
-      .post-content h3 {
-        font-size: 22px; } }
-  .post-content h4 {
-    font-size: 20px; }
-    @media screen and (max-width: 800px) {
-      .post-content h4 {
-        font-size: 18px; } }
+@media all and (min-width: 480px) {
+  .little-5 {
+    width: 5%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-10 {
+    width: 10%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-15 {
+    width: 15%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-20 {
+    width: 20%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-25 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-30 {
+    width: 30%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-35 {
+    width: 35%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-40 {
+    width: 40%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-45 {
+    width: 45%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-50 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-55 {
+    width: 55%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-60 {
+    width: 60%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-65 {
+    width: 65%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-70 {
+    width: 70%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-75 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-80 {
+    width: 80%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-85 {
+    width: 85%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-90 {
+    width: 90%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-95 {
+    width: 95%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-100 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .grid-12 .little-1 {
+    width: 8.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-2 {
+    width: 16.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-3 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-4 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-5 {
+    width: 41.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-6 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-7 {
+    width: 58.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-8 {
+    width: 66.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-9 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-10 {
+    width: 83.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-11 {
+    width: 91.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .little-12 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .little-center-5 {
+    width: 5%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-10 {
+    width: 10%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-15 {
+    width: 15%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-20 {
+    width: 20%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-25 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-30 {
+    width: 30%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-35 {
+    width: 35%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-40 {
+    width: 40%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-45 {
+    width: 45%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-50 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-55 {
+    width: 55%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-60 {
+    width: 60%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-65 {
+    width: 65%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-70 {
+    width: 70%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-75 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-80 {
+    width: 80%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-85 {
+    width: 85%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-90 {
+    width: 90%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-95 {
+    width: 95%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-100 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-left-5 {
+    width: 5%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-10 {
+    width: 10%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-15 {
+    width: 15%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-20 {
+    width: 20%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-25 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-30 {
+    width: 30%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-35 {
+    width: 35%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-40 {
+    width: 40%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-45 {
+    width: 45%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-50 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-55 {
+    width: 55%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-60 {
+    width: 60%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-65 {
+    width: 65%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-70 {
+    width: 70%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-75 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-80 {
+    width: 80%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-85 {
+    width: 85%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-90 {
+    width: 90%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-95 {
+    width: 95%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-100 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-right-5 {
+    width: 5%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-10 {
+    width: 10%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-15 {
+    width: 15%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-20 {
+    width: 20%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-25 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-30 {
+    width: 30%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-35 {
+    width: 35%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-40 {
+    width: 40%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-45 {
+    width: 45%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-50 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-55 {
+    width: 55%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-60 {
+    width: 60%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-65 {
+    width: 65%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-70 {
+    width: 70%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-75 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-80 {
+    width: 80%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-85 {
+    width: 85%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-90 {
+    width: 90%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-95 {
+    width: 95%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-100 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-center-1 {
+    width: 8.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-2 {
+    width: 16.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-3 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-4 {
+    width: 33.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-5 {
+    width: 41.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-6 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-7 {
+    width: 58.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-8 {
+    width: 66.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-9 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-10 {
+    width: 83.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-11 {
+    width: 91.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-center-12 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .little-left-1 {
+    width: 8.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-2 {
+    width: 16.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-3 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-4 {
+    width: 33.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-5 {
+    width: 41.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-6 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-7 {
+    width: 58.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-8 {
+    width: 66.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-9 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-10 {
+    width: 83.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-11 {
+    width: 91.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-left-12 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .little-right-1 {
+    width: 8.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-2 {
+    width: 16.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-3 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-4 {
+    width: 33.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-5 {
+    width: 41.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-6 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-7 {
+    width: 58.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-8 {
+    width: 66.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-9 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-10 {
+    width: 83.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-11 {
+    width: 91.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .little-right-12 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; } }
+@media all and (min-width: 768px) {
+  .small-5 {
+    width: 5%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-10 {
+    width: 10%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-15 {
+    width: 15%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-20 {
+    width: 20%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-25 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-30 {
+    width: 30%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-35 {
+    width: 35%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-40 {
+    width: 40%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-45 {
+    width: 45%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-50 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-55 {
+    width: 55%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-60 {
+    width: 60%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-65 {
+    width: 65%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-70 {
+    width: 70%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-75 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-80 {
+    width: 80%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-85 {
+    width: 85%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-90 {
+    width: 90%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-95 {
+    width: 95%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-100 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .grid-12 .small-1 {
+    width: 8.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-2 {
+    width: 16.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-3 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-4 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-5 {
+    width: 41.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-6 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-7 {
+    width: 58.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-8 {
+    width: 66.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-9 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-10 {
+    width: 83.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-11 {
+    width: 91.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .small-12 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .small-center-5 {
+    width: 5%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-10 {
+    width: 10%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-15 {
+    width: 15%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-20 {
+    width: 20%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-25 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-30 {
+    width: 30%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-35 {
+    width: 35%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-40 {
+    width: 40%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-45 {
+    width: 45%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-50 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-55 {
+    width: 55%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-60 {
+    width: 60%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-65 {
+    width: 65%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-70 {
+    width: 70%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-75 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-80 {
+    width: 80%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-85 {
+    width: 85%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-90 {
+    width: 90%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-95 {
+    width: 95%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-100 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-left-5 {
+    width: 5%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-10 {
+    width: 10%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-15 {
+    width: 15%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-20 {
+    width: 20%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-25 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-30 {
+    width: 30%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-35 {
+    width: 35%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-40 {
+    width: 40%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-45 {
+    width: 45%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-50 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-55 {
+    width: 55%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-60 {
+    width: 60%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-65 {
+    width: 65%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-70 {
+    width: 70%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-75 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-80 {
+    width: 80%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-85 {
+    width: 85%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-90 {
+    width: 90%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-95 {
+    width: 95%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-100 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-right-5 {
+    width: 5%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-10 {
+    width: 10%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-15 {
+    width: 15%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-20 {
+    width: 20%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-25 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-30 {
+    width: 30%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-35 {
+    width: 35%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-40 {
+    width: 40%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-45 {
+    width: 45%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-50 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-55 {
+    width: 55%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-60 {
+    width: 60%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-65 {
+    width: 65%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-70 {
+    width: 70%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-75 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-80 {
+    width: 80%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-85 {
+    width: 85%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-90 {
+    width: 90%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-95 {
+    width: 95%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-100 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-center-1 {
+    width: 8.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-2 {
+    width: 16.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-3 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-4 {
+    width: 33.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-5 {
+    width: 41.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-6 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-7 {
+    width: 58.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-8 {
+    width: 66.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-9 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-10 {
+    width: 83.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-11 {
+    width: 91.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-center-12 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .small-left-1 {
+    width: 8.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-2 {
+    width: 16.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-3 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-4 {
+    width: 33.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-5 {
+    width: 41.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-6 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-7 {
+    width: 58.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-8 {
+    width: 66.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-9 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-10 {
+    width: 83.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-11 {
+    width: 91.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-left-12 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .small-right-1 {
+    width: 8.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-2 {
+    width: 16.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-3 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-4 {
+    width: 33.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-5 {
+    width: 41.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-6 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-7 {
+    width: 58.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-8 {
+    width: 66.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-9 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-10 {
+    width: 83.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-11 {
+    width: 91.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .small-right-12 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; } }
+@media all and (min-width: 998px) {
+  .medium-5 {
+    width: 5%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-10 {
+    width: 10%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-15 {
+    width: 15%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-20 {
+    width: 20%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-25 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-30 {
+    width: 30%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-35 {
+    width: 35%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-40 {
+    width: 40%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-45 {
+    width: 45%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-50 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-55 {
+    width: 55%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-60 {
+    width: 60%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-65 {
+    width: 65%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-70 {
+    width: 70%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-75 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-80 {
+    width: 80%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-85 {
+    width: 85%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-90 {
+    width: 90%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-95 {
+    width: 95%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-100 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .grid-12 .medium-1 {
+    width: 8.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-2 {
+    width: 16.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-3 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-4 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-5 {
+    width: 41.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-6 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-7 {
+    width: 58.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-8 {
+    width: 66.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-9 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-10 {
+    width: 83.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-11 {
+    width: 91.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .medium-12 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .medium-center-5 {
+    width: 5%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-10 {
+    width: 10%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-15 {
+    width: 15%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-20 {
+    width: 20%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-25 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-30 {
+    width: 30%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-35 {
+    width: 35%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-40 {
+    width: 40%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-45 {
+    width: 45%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-50 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-55 {
+    width: 55%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-60 {
+    width: 60%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-65 {
+    width: 65%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-70 {
+    width: 70%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-75 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-80 {
+    width: 80%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-85 {
+    width: 85%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-90 {
+    width: 90%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-95 {
+    width: 95%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-100 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-left-5 {
+    width: 5%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-10 {
+    width: 10%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-15 {
+    width: 15%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-20 {
+    width: 20%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-25 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-30 {
+    width: 30%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-35 {
+    width: 35%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-40 {
+    width: 40%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-45 {
+    width: 45%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-50 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-55 {
+    width: 55%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-60 {
+    width: 60%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-65 {
+    width: 65%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-70 {
+    width: 70%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-75 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-80 {
+    width: 80%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-85 {
+    width: 85%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-90 {
+    width: 90%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-95 {
+    width: 95%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-100 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-right-5 {
+    width: 5%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-10 {
+    width: 10%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-15 {
+    width: 15%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-20 {
+    width: 20%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-25 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-30 {
+    width: 30%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-35 {
+    width: 35%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-40 {
+    width: 40%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-45 {
+    width: 45%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-50 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-55 {
+    width: 55%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-60 {
+    width: 60%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-65 {
+    width: 65%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-70 {
+    width: 70%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-75 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-80 {
+    width: 80%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-85 {
+    width: 85%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-90 {
+    width: 90%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-95 {
+    width: 95%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-100 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-center-1 {
+    width: 8.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-2 {
+    width: 16.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-3 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-4 {
+    width: 33.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-5 {
+    width: 41.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-6 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-7 {
+    width: 58.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-8 {
+    width: 66.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-9 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-10 {
+    width: 83.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-11 {
+    width: 91.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-center-12 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .medium-left-1 {
+    width: 8.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-2 {
+    width: 16.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-3 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-4 {
+    width: 33.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-5 {
+    width: 41.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-6 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-7 {
+    width: 58.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-8 {
+    width: 66.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-9 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-10 {
+    width: 83.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-11 {
+    width: 91.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-left-12 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .medium-right-1 {
+    width: 8.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-2 {
+    width: 16.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-3 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-4 {
+    width: 33.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-5 {
+    width: 41.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-6 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-7 {
+    width: 58.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-8 {
+    width: 66.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-9 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-10 {
+    width: 83.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-11 {
+    width: 91.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .medium-right-12 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; } }
+@media all and (min-width: 1200px) {
+  .large-5 {
+    width: 5%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-10 {
+    width: 10%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-15 {
+    width: 15%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-20 {
+    width: 20%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-25 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-30 {
+    width: 30%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-35 {
+    width: 35%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-40 {
+    width: 40%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-45 {
+    width: 45%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-50 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-55 {
+    width: 55%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-60 {
+    width: 60%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-65 {
+    width: 65%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-70 {
+    width: 70%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-75 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-80 {
+    width: 80%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-85 {
+    width: 85%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-90 {
+    width: 90%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-95 {
+    width: 95%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-100 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .grid-12 .large-1 {
+    width: 8.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-2 {
+    width: 16.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-3 {
+    width: 25%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-4 {
+    width: 33.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-5 {
+    width: 41.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-6 {
+    width: 50%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-7 {
+    width: 58.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-8 {
+    width: 66.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-9 {
+    width: 75%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-10 {
+    width: 83.33333%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-11 {
+    width: 91.66667%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+  .grid-12 .large-12 {
+    width: 100%;
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%; }
+
+  .large-center-5 {
+    width: 5%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-10 {
+    width: 10%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-15 {
+    width: 15%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-20 {
+    width: 20%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-25 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-30 {
+    width: 30%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-35 {
+    width: 35%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-40 {
+    width: 40%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-45 {
+    width: 45%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-50 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-55 {
+    width: 55%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-60 {
+    width: 60%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-65 {
+    width: 65%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-70 {
+    width: 70%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-75 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-80 {
+    width: 80%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-85 {
+    width: 85%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-90 {
+    width: 90%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-95 {
+    width: 95%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-100 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-left-5 {
+    width: 5%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-10 {
+    width: 10%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-15 {
+    width: 15%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-20 {
+    width: 20%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-25 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-30 {
+    width: 30%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-35 {
+    width: 35%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-40 {
+    width: 40%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-45 {
+    width: 45%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-50 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-55 {
+    width: 55%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-60 {
+    width: 60%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-65 {
+    width: 65%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-70 {
+    width: 70%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-75 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-80 {
+    width: 80%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-85 {
+    width: 85%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-90 {
+    width: 90%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-95 {
+    width: 95%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-100 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-right-5 {
+    width: 5%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-10 {
+    width: 10%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-15 {
+    width: 15%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-20 {
+    width: 20%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-25 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-30 {
+    width: 30%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-35 {
+    width: 35%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-40 {
+    width: 40%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-45 {
+    width: 45%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-50 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-55 {
+    width: 55%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-60 {
+    width: 60%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-65 {
+    width: 65%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-70 {
+    width: 70%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-75 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-80 {
+    width: 80%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-85 {
+    width: 85%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-90 {
+    width: 90%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-95 {
+    width: 95%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-100 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-center-1 {
+    width: 8.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-2 {
+    width: 16.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-3 {
+    width: 25%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-4 {
+    width: 33.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-5 {
+    width: 41.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-6 {
+    width: 50%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-7 {
+    width: 58.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-8 {
+    width: 66.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-9 {
+    width: 75%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-10 {
+    width: 83.33333%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-11 {
+    width: 91.66667%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-center-12 {
+    width: 100%;
+    margin: 0 auto;
+    float: initial; }
+
+  .large-left-1 {
+    width: 8.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-2 {
+    width: 16.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-3 {
+    width: 25%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-4 {
+    width: 33.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-5 {
+    width: 41.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-6 {
+    width: 50%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-7 {
+    width: 58.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-8 {
+    width: 66.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-9 {
+    width: 75%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-10 {
+    width: 83.33333%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-11 {
+    width: 91.66667%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-left-12 {
+    width: 100%;
+    margin-right: auto;
+    float: initial; }
+
+  .large-right-1 {
+    width: 8.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-2 {
+    width: 16.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-3 {
+    width: 25%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-4 {
+    width: 33.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-5 {
+    width: 41.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-6 {
+    width: 50%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-7 {
+    width: 58.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-8 {
+    width: 66.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-9 {
+    width: 75%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-10 {
+    width: 83.33333%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-11 {
+    width: 91.66667%;
+    margin-left: auto;
+    float: initial; }
+
+  .large-right-12 {
+    width: 100%;
+    margin-left: auto;
+    float: initial; } }
+/*
+	Imagenes setup
+*/
+img {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom; }
+
+.img-circle {
+  border-radius: 50%; }
+
+.img-border {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  line-height: 1.42857143; }
+
+.img-radius {
+  border-radius: 5px; }
+
+/*
+	Inputs
+*/
+.input, .input-cube, .input-radius, .input-bold, .input-line {
+  width: 100%;
+  border-radius: 5px;
+  color: #202020;
+  background-color: transparent !important;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: Source Sans Pro;
+  outline: 0;
+  margin-bottom: 15px;
+  display: block;
+  transition: all .3s; }
+  .input:focus, .input-cube:focus, .input-radius:focus, .input-bold:focus, .input-line:focus {
+    border: 1px solid #848484; }
+
+.input-cube {
+  border-radius: 0px; }
+
+.input-radius {
+  border-radius: 25px; }
+
+.input-bold {
+  border: 3px solid #ccc; }
+  .input-bold:focus {
+    border: 3px solid #848484; }
+
+.input-line {
+  border: 0px;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0px; }
+  .input-line:focus {
+    border: 0px;
+    border-bottom: 2px solid #848484; }
+
+/*
+	Forms
+*/
+.form {
+  width: 100%;
+  display: block; }
+  .form:after, .form:before {
+    clear: both;
+    display: table;
+    content: ""; }
+
+.form-column-1 {
+  width: 100%;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%; }
+
+.form-column-2 {
+  width: 50%;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%; }
+
+.form-column-3 {
+  width: 33.33333%;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%; }
+
+.form-column-4 {
+  width: 25%;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%; }
+
+@media (max-width: 600px) {
+  .form-column-1 {
+    width: 100%;
+    float: left; }
+
+  .form-column-2 {
+    width: 100%;
+    float: left; }
+
+  .form-column-3 {
+    width: 100%;
+    float: left; }
+
+  .form-column-4 {
+    width: 100%;
+    float: left; } }
+/*
+	Margenes predefinidos
+*/
+.l-margin {
+  margin-bottom: 6.5rem;
+  margin-top: 6.5rem; }
+
+.l-mtop {
+  margin-top: 6.5rem; }
+
+.l-mbottom {
+  margin-bottom: 6.5rem; }
+
+.m-margin {
+  margin-bottom: 5rem;
+  margin-top: 5rem; }
+
+.m-mtop {
+  margin-top: 5rem; }
+
+.m-mbottom {
+  margin-bottom: 5rem; }
+
+.s-margin {
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem; }
+
+.s-mtop {
+  margin-top: 3.5rem; }
+
+.s-mbottom {
+  margin-bottom: 3.5rem; }
+
+.li-margin {
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
+.li-mtop {
+  margin-top: 2rem; }
+
+.li-mbottom {
+  margin-bottom: 2rem; }
+
+/*
+	Paddings predefinidos
+*/
+.l-padding {
+  padding-bottom: 6.5rem;
+  padding-top: 6.5rem; }
+
+.l-ptop {
+  padding-top: 6.5rem; }
+
+.l-pbottom {
+  padding-bottom: 6.5rem; }
+
+.m-padding {
+  padding-bottom: 5rem;
+  padding-top: 5rem; }
+
+.m-ptop {
+  padding-top: 5rem; }
+
+.m-pbottom {
+  padding-bottom: 5rem; }
+
+.s-padding {
+  padding-bottom: 3.5rem;
+  padding-top: 3.5rem; }
+
+.s-ptop {
+  padding-top: 3.5rem; }
+
+.s-pbottom {
+  padding-bottom: 3.5rem; }
+
+.li-padding {
+  padding-bottom: 2rem;
+  padding-top: 2rem; }
+
+.li-ptop {
+  padding-top: 2rem; }
+
+.li-pbottom {
+  padding-bottom: 2rem; }
+
+/*Aligns*/
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+/*
+	Botones
+*/
+.button {
+  background-color: #ccc;
+  border: 1px solid #a3a3a3;
+  padding: 5px 25px;
+  color: #202020;
+  font-size: .9rem;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  outline: 0; }
+  .button.red-full {
+    background-color: #f44336;
+    color: #FFF;
+    border: none; }
+  .button.red-dark-full {
+    background-color: #d32f2f;
+    color: #FFF;
+    border: none; }
+  .button.blue-full {
+    background-color: #0d47a1;
+    color: #FFF;
+    border: none; }
+  .button.cyan-full {
+    background-color: #00bcd4;
+    color: #FFF;
+    border: none; }
+  .button.green-full {
+    background-color: #00bcd4;
+    color: #FFF;
+    border: none; }
+  .button.red-border {
+    background-color: transparent;
+    color: #f44336;
+    border: 2px solid #f44336;
+    border-radius: 5px;
+    transition: all .3s; }
+    .button.red-border:hover {
+      background-color: #f44336;
+      color: #FFF; }
+  .button.red-dark-border {
+    background-color: transparent;
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+    border-radius: 5px;
+    transition: all .3s; }
+    .button.red-dark-border:hover {
+      background-color: #d32f2f;
+      color: #FFF; }
+  .button.blue-border {
+    background-color: transparent;
+    color: #0d47a1;
+    border: 2px solid #0d47a1;
+    border-radius: 5px;
+    transition: all .3s; }
+    .button.blue-border:hover {
+      background-color: #0d47a1;
+      color: #FFF; }
+  .button.cyan-border {
+    background-color: transparent;
+    color: #00bcd4;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+    transition: all .3s; }
+    .button.cyan-border:hover {
+      background-color: #00bcd4;
+      color: #FFF; }
+  .button.green-border {
+    background-color: transparent;
+    color: #00bcd4;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+    transition: all .3s; }
+    .button.green-border:hover {
+      background-color: #00bcd4;
+      color: #FFF; }
 
 /**
  * Syntax highlighting styles
