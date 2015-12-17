@@ -1,0 +1,39 @@
+/*
+	Menús module
+*/
+
+$color-white: #FFF;
+$color-black: #202020;
+//Menús configuracion
+.menu{
+	height: $menu-height;
+	display: block;
+	width: 100%;
+	background-color: #e2e2e2;
+	border-bottom: 1px solid #ccc;
+	padding: 0% 1%;
+
+	&.menu-left{
+		@include make-menu($menu-height, left, absolute);
+	}
+	
+	&.menu-right{
+		text-align: right;
+		@include make-menu($menu-height, right, absolute);
+	}
+	&.menu-black{
+		@include menu-color($black,$black-hover, $color-white);
+	}
+	&.menu-red{
+		@include menu-color($red, $red-hover, $color-white);
+	}
+	&.menu-blue{
+		@include menu-color($blue, $blue-hover, $color-white);
+	}
+	&.menu-green{
+		@include menu-color($green, $green-hover, $color-white);
+	}
+	&.menu-orange{
+		@include menu-color($orange, $orange-hover, $color-white);
+	}
+}
