@@ -42,3 +42,17 @@ $margen-prefix : (
 		padding-bottom: $value;
 	}
 }
+
+/*alineaciones*/
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+.text-justify{
+	text-align: text-justify;
+}
