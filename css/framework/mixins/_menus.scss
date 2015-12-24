@@ -1,0 +1,88 @@
+//Mixins of menús
+
+//menú left
+@mixin make-menu($menu-height, $align, $position){
+	.title-menu{
+		display: block;
+		float: left;
+		height: $menu-height;
+		margin-right: 30px;
+		text-align: left;
+		a{
+			font-size: 1.3rem;
+			display: table-cell;
+			vertical-align: middle;
+			height: $menu-height;
+			color: #202020;
+		}
+	}
+	.toggle-button{display: none}
+	ul{
+		float: $align;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		height: $menu-height;
+
+		li{
+			display: inline-block;
+
+			a{
+				display: table-cell;
+				vertical-align: middle;
+				padding-left: 12px;
+				padding-right: 12px;
+				font-size: .9rem;
+				height: $menu-height;
+				color: #202020;
+				transition: all .3s;
+				&:hover{
+					background-color: #ccc;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px){
+		ul{
+			display: block;
+			float: inherit;
+			position: absolute;
+			height: auto;
+		}
+		.toggle-button{
+			display: block;
+			float: right;
+			color: #FFF;
+			outline: 0;
+			background-color: transparent;
+			cursor: pointer;
+			border: none;
+			position: relative;
+			top: 15px;
+			right: 15px;
+		}
+	}
+
+}
+
+//color del menu
+@mixin menu-color($color,$color-hover, $text-color){
+
+	background-color: $color;
+	border-color: $color-hover !important;
+
+	.title-menu{
+		a{
+			color: $text-color !important;
+		}
+	}
+
+	li a{
+		color: $text-color !important;
+		transition: all .3s;
+		&:hover{
+			background-color: $color-hover !important;
+		}
+	}
+}

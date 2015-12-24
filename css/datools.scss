@@ -13,12 +13,15 @@
 *	6. Fonts
 */
 
+//import mixins
+@import "framework/mixins";
+
 @import "framework/variables";
 @import "framework/fonts";
 @import "framework/normalize";
-@import "framework/icons";
 @import "framework/grid";
 @import "framework/image";
 @import "framework/inputs";
 @import "framework/utils";
 @import "framework/buttons";
+@import "framework/menus";

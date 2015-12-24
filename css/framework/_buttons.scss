@@ -2,6 +2,13 @@
 	Botones
 */
 
+$button-size: (
+	little : 5px 25px,
+	small  : 10px 30px,
+	medium : 11px 35px,
+	large  : 12px 45px
+);
+
 //formato
 .button{
 	background-color: #ccc;
@@ -16,24 +23,68 @@
 	border-radius: 5px;
 	outline: 0;
 
-	@each $col, $valor in $color-general{
-		&.#{$col}-full{
-			background-color: #{$valor};
-			color: #FFF;
-			border: none;
-		}
+	//butons fulls
+	&.red-full{
+		@include button-full($red, $red-hover);
 	}
-	@each $col, $valor in $color-general{
-		&.#{$col}-border{
-			background-color: transparent;
-			color: #{$valor};
-			border: 2px solid #{$valor};
-			border-radius: 5px;
-			transition: all .3s;
-			&:hover{
-				background-color: #{$valor};
-				color: #FFF;
-			}
-		}
+
+	&.blue-full{
+		@include button-full($blue, $blue-hover);
 	}
+
+	&.green-full{
+		@include button-full($green, $green-hover);
+	}
+
+	&.black-full{
+		@include button-full($black, $black-hover);
+	}
+
+	&.orange-full{
+		@include button-full($orange, $orange-hover);
+	}
+	
+	//buttons with border color
+	&.red-border{
+		@include button-border($red);
+	}
+
+	&.blue-border{
+		@include button-border($blue);
+	}
+
+	&.green-border{
+		@include button-border($green);
+	}
+
+	&.black-border{
+		@include button-border($black);
+	}
+
+	&.orange-border{
+		@include button-border($orange);
+	}
+
+	//buttons with border-bottom and bull
+	&.red-bottom{
+		@include button-bottom($red, $red-hover);
+	}
+
+	&.blue-bottom{
+		@include button-bottom($blue, $blue-hover);
+	}
+
+	&.green-bottom{
+		@include button-bottom($green, $green-hover);
+	}
+
+	&.black-bottom{
+		@include button-bottom($black, $black-hover);
+	}
+
+	&.orange-bottom{
+		@include button-bottom($orange, $orange-hover);
+	}
+	//buttons size
+	@include button-size($button-size);
 }

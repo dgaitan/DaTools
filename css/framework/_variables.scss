@@ -93,14 +93,26 @@ $form-column : 4;
 /*
 	Paleta de colores (son usados para los botones)
 */
-$color-general : (
-	red 		: #f44336,
-	red-dark 	: #d32f2f,
-	blue 		: #0d47a1,
-	cyan 		: #00bcd4,
-	green 		: #00bcd4
-);
-$red 		: #f44336;
-$red-dark 	: #d32f2f;
-$blue 		: #0d47a1;
-$cyan 		: #00bcd4;
+	//rojo
+	$red 		: #DB2828;
+	$red-hover 	: #B52121;
+	//blue
+	$blue 		: #1678c2;
+	$blue-hover : #1365A3;
+	//green
+	$green 		: #21BA45;
+	$green-hover: #138C2F;
+	//black
+	$black		: #1B1C1D;
+	$black-hover: #27292a;
+	//orange
+	$orange		: #F2711C;
+	$orange-hover: #CB6019;
+
+/*
+	Menús
+*/
+
+	//Altura de los menús
+	$menu-height: 60px;
+	
