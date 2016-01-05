@@ -5,12 +5,17 @@
 /*
 *	Orden de la librería
 *	
-*	1. Variables
-*	2. Normalize
-*	3. Iconos
-*	4. Grid
-*	5. botones 
-*	6. Fonts
+*	1. Mixins
+*	2. Variables
+*	3. Fuentes e iconos
+*	4. normalize
+*	5. grid 
+*	6. flexbox
+	7. estilos de imagenes
+	8. estilos de inputs
+	9. utilidades
+	10. estilos de botones
+	11. estilos de menú(beta)
 */
 
 //import mixins
@@ -20,6 +25,7 @@
 @import "framework/fonts";
 @import "framework/normalize";
 @import "framework/grid";
+@import "framework/flexbox";
 @import "framework/image";
 @import "framework/inputs";
 @import "framework/utils";

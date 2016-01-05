@@ -1,0 +1,134 @@
+/*
+
+	Grid version 1 with flexbox
+	author: David Gaitán
+
+*/
+
+.container-flex{
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	max-width: $max-width;
+}
+.container-flex-all{
+	display: flex;
+	flex-direction: row;
+	padding-left: $padding;
+	padding-right: $padding;
+	width: 100%;
+}
+.container-flex-full{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+//grid system with flexbox
+@each $breack, $point in $breackpoints{
+	.container-flex, .container-flex-all, .container-flex-full{
+		//mediaquery para ejecutar los breackpoints
+		@media all and (min-width: $point){
+			//medidas para grid de 5 en 5
+			@for $i from 1 through 20{
+				.#{$breack}-#{$i * 5}{
+					width: unquote($i*5 + '%');
+					float: left;
+					padding-left: $padding;
+					padding-right: $padding;
+				}
+			}
+			//medias para grid basado en 12 rejillas
+			.grid-12{
+				@for $i from 1 through 12{
+					.#{$breack}-#{$i}{
+						width: percentage( $i / 12 );
+						float: left;
+						padding-left: $padding;
+						padding-right: $padding;
+					}
+				}
+			}
+			//centrar las cajas
+			@for $i from 1 through 20{
+				.#{$breack}-center-#{$i*5}{
+					width: unquote($i*5 + '%');
+					margin: 0 auto;
+					float: initial;
+				}
+			}
+			//alinear a la izquierda
+			@for $i from 1 through 20{
+				.#{$breack}-left-#{$i*5}{
+					width: unquote($i*5 + '%');
+					margin-right: auto;
+					float: initial;
+				}
+			}
+			//alinear a la derecha
+			@for $i from 1 through 20{
+				.#{$breack}-right-#{$i*5}{
+					width: unquote($i*5 + '%');
+					margin-left: auto;
+					float: initial;
+				}
+			}
+			//alineacion basada en grid de 12 rejilalas
+			//centrar las cajas
+			@for $i from 1 through 12{
+				.#{$breack}-center-#{$i}{
+					width: percentage( $i / 12 );
+					margin: 0 auto;
+					float: initial;
+				}
+			}
+			//alinear a la izquierda
+			@for $i from 1 through 12{
+				.#{$breack}-left-#{$i}{
+					width: percentage( $i / 12 );
+					margin-right: auto;
+					float: initial;
+				}
+			}
+			//alinear a la derecha
+			@for $i from 1 through 12{
+				.#{$breack}-right-#{$i}{
+					width: percentage( $i / 12 );
+					margin-left: auto;
+					float: initial;
+				}
+			}
+		}
+	}
+}
+
+@if $custom-breackpoint != '' { 
+
+	//custom breackpoint 
+	@each $breack, $point in $custom-breackpoint{
+		//mediaquery para ejecutar los breackpoints
+		.container-flex{
+			@media all and (min-width: $point){
+
+				@for $i from 1 through 20{
+					.#{$breack}-#{$i * 5}{
+						width: unquote($i*5 + '%');
+						float: left;
+						padding-left: $padding;
+						padding-right: $padding;
+					}
+				}
+				.grid-12{
+					@for $i from 1 through 12{
+						.#{$breack}-#{$i}{
+							width: percentage( $i / 12 );
+							float: left;
+							padding-left: $padding;
+							padding-right: $padding;
+						}
+					}
+				}
+			}
+		}
+	}
+}
