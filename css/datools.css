@@ -5081,7 +5081,11 @@ img {
       display: block;
       float: inherit;
       position: absolute;
-      height: auto; }
+      height: auto;
+      width: 100%;
+      left: 0; }
+      .menu.menu-left ul li {
+        display: block; }
     .menu.menu-left .toggle-button {
       display: block;
       float: right;
@@ -5133,7 +5137,11 @@ img {
         display: block;
         float: inherit;
         position: absolute;
-        height: auto; }
+        height: auto;
+        width: 100%;
+        left: 0; }
+        .menu.menu-right ul li {
+          display: block; }
       .menu.menu-right .toggle-button {
         display: block;
         float: right;
