@@ -1,0 +1,35 @@
+/*
+*	Datos del grid
+*/
+
+//grid container size
+$max-width: 1100px;
+
+//padding entre las columnas
+$padding: 1%;
+
+	/*
+		Breackpoints
+		- Si quieres cambiar los valores de los prefijos, solo cambia el primero valor de array
+		Por ejemplo:
+			$breackpoints:(little : 480px);
+			Por:
+			$breackpoints:(chiquito : 480px);
+
+		- Si quieres agregar una medida custom (una medida más agregada por tí) solamente tienes que añadir los valores dentro de la variable $custom-breackpoint;
+		Por ejemplo:
+			$custom-breackpoint:(
+				mivalor : 1000px;
+			);
+	*/
+		$breackpoints: (
+			little : 480px,
+			small  : 768px,
+			medium : 998px,
+			large  : 1200px
+		);
+		//custom breackpoints
+		$custom-breackpoint: (
+
+		);
+
