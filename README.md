@@ -3,4 +3,4 @@ Small libraries css
 
 --------------------
 
-Cooming soon the version in Sass..
+Check the wiki pages
