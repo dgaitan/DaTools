@@ -32,7 +32,7 @@
 @each $breack, $point in $breackpoints{
 
 	//mediaquery para ejecutar los breackpoints
-	@media all and (min-width: $point){
+	@media screen and (min-width: $point){
 		//medidas para grid de 5 en 5
 		@for $i from 1 through 20{
 			.#{$breack}-#{$i * 5}{
