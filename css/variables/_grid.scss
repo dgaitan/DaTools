@@ -6,30 +6,18 @@
 $max-width: 1100px;
 
 //padding entre las columnas
-$padding: 1%;
+$padding: 12px;
 
-	/*
-		Breackpoints
-		- Si quieres cambiar los valores de los prefijos, solo cambia el primero valor de array
-		Por ejemplo:
-			$breackpoints:(little : 480px);
-			Por:
-			$breackpoints:(chiquito : 480px);
+$phone-view 		  : ( little : 0px );
+//funciona en todas las pantallas
+$phone-rotate-view    : ( little-rotate : 480px );
 
-		- Si quieres agregar una medida custom (una medida más agregada por tí) solamente tienes que añadir los valores dentro de la variable $custom-breackpoint;
-		Por ejemplo:
-			$custom-breackpoint:(
-				mivalor : 1000px;
-			);
-	*/
-		$breackpoints: (
-			little : 480px,
-			small  : 768px,
-			medium : 998px,
-			large  : 1200px
-		);
-		//custom breackpoints
-		$custom-breackpoint: (
+//funciona a partir de pantallas de 768px y termina en 998px
+$tablet-view          : ( small  : 768px );
 
-		);
+//funciona a partir de pantallas de 998px y termina en 1200px
+$laptop-view          : ( medium : 998px );
+
+//funciona a partir de pantallas de 1200px
+$desktop-view         : ( large  : 1200px );
 

@@ -6,119 +6,79 @@
 */
 
 .container-flex{
-	display: flex;
-	flex-direction: row;
-	margin: 0 auto;
-	max-width: $max-width;
+	
+	@include create-container($max-width, $padding, true, normal);
+
 }
 .container-flex-all{
-	display: flex;
-	flex-direction: row;
-	padding-left: $padding;
-	padding-right: $padding;
-	width: 100%;
+	
+	@include create-container($max-width, $padding, true, all);
+
 }
 .container-flex-full{
-	display: flex;
-	flex-direction: row;
-	width: 100%;
+	
+	@include create-container($max-width, $padding, true, full);
+
 }
 
-//grid system with flexbox
-@each $breack, $point in $breackpoints{
-	.container-flex, .container-flex-all, .container-flex-full{
-		//mediaquery para ejecutar los breackpoints
-		@media all and (min-width: $point){
-			//medidas para grid de 5 en 5
-			@for $i from 1 through 20{
-				.#{$breack}-#{$i * 5}{
-					width: unquote($i*5 + '%');
-					padding-left: $padding;
-					padding-right: $padding;
-				}
-			}
-			//medias para grid basado en 12 rejillas
-			.grid-12{
-				@for $i from 1 through 12{
-					.#{$breack}-#{$i}{
-						width: percentage( $i / 12 );
-						padding-left: $padding;
-						padding-right: $padding;
-					}
-				}
-			}
-			//centrar las cajas
-			@for $i from 1 through 20{
-				.#{$breack}-center-#{$i*5}{
-					width: unquote($i*5 + '%');
-					margin: 0 auto;
-				}
-			}
-			//alinear a la izquierda
-			@for $i from 1 through 20{
-				.#{$breack}-left-#{$i*5}{
-					width: unquote($i*5 + '%');
-					margin-right: auto;
-				}
-			}
-			//alinear a la derecha
-			@for $i from 1 through 20{
-				.#{$breack}-right-#{$i*5}{
-					width: unquote($i*5 + '%');
-					margin-left: auto;
-				}
-			}
-			//alineacion basada en grid de 12 rejilalas
-			//centrar las cajas
-			@for $i from 1 through 12{
-				.#{$breack}-center-#{$i}{
-					width: percentage( $i / 12 );
-					margin: 0 auto;
-				}
-			}
-			//alinear a la izquierda
-			@for $i from 1 through 12{
-				.#{$breack}-left-#{$i}{
-					width: percentage( $i / 12 );
-					margin-right: auto;
-				}
-			}
-			//alinear a la derecha
-			@for $i from 1 through 12{
-				.#{$breack}-right-#{$i}{
-					width: percentage( $i / 12 );
-					margin-left: auto;
-				}
-			}
-		}
-	}
+/*Phone views flexbox*/
+
+@each $name, $value in $phone-view{
+
+	@include create-column($name, $value, five, true, $padding);
+
+	@include create-column($name, $value, twelve, true, $padding);
+
 }
 
-@if $custom-breackpoint != '' { 
+/*Desktop views flexbox*/
+@each $name, $value in $phone-rotate-view{
 
-	//custom breackpoint 
-	@each $breack, $point in $custom-breackpoint{
-		//mediaquery para ejecutar los breackpoints
-		.container-flex{
-			@media all and (min-width: $point){
+	@media (min-width: $value){
 
-				@for $i from 1 through 20{
-					.#{$breack}-#{$i * 5}{
-						width: unquote($i*5 + '%');
-						padding-left: $padding;
-						padding-right: $padding;
-					}
-				}
-				.grid-12{
-					@for $i from 1 through 12{
-						.#{$breack}-#{$i}{
-							width: percentage( $i / 12 );
-							padding-left: $padding;
-							padding-right: $padding;
-						}
-					}
-				}
-			}
-		}
+		@include create-column($name, $value, five, true, $padding);
+
+		@include create-column($name, $value, twelve, true, $padding);
+
 	}
+
+}
+
+/*Desktop views flexbox*/
+@each $name, $value in $tablet-view{
+
+	@media (min-width: $value){
+
+		@include create-column($name, $value, five, true, $padding);
+
+		@include create-column($name, $value, twelve, true, $padding);
+
+	}
+
+}
+
+/*Desktop views flexbox*/
+@each $name, $value in $laptop-view{
+
+	@media (min-width: $value){
+
+		@include create-column($name, $value, five, true, $padding);
+
+		@include create-column($name, $value, twelve, true, $padding);
+
+	}
+
+}
+
+/*Desktop views flexbox*/
+@each $name, $value in $desktop-view{
+
+	@media (min-width: $value){
+
+		@include create-column($name, $value, five, true, $padding);
+
+		@include create-column($name, $value, twelve, true, $padding);
+
+	}
+
 }
