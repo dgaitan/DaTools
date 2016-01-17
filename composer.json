@@ -1,0 +1,24 @@
+{
+  "name": "dg/datools",
+  "description": "The simple front-end framework developed thinking in the simple and fast",
+  "keywords": [
+    "css",
+    "sass",
+    "web-responsive",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "authors": [
+    {
+      "name": "David Gaitan",
+      "email": "jdavid.gaitan@gmail.com",
+      "homepage": "http://www.dgaitan.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/dgaitan/DaTools/issues"
+  },
+  "license": "GNU GENERAL PUBLIC LICENSE",
+}
