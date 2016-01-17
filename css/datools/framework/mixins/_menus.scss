@@ -49,6 +49,12 @@
 			float: inherit;
 			position: absolute;
 			height: auto;
+			width: 100%;
+			left: 0;
+
+			li{
+				display: block;
+			}
 		}
 		.toggle-button{
 			display: block;

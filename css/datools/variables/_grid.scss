@@ -1,0 +1,23 @@
+//
+//	Datos del grid
+//
+
+//grid container size
+$max-width: 1100px;
+
+//padding entre las columnas
+$padding: 12px;
+
+$phone-view 		  : ( little : 0px );
+//funciona en todas las pantallas
+$phone-rotate-view    : ( little-rotate : 480px );
+
+//funciona a partir de pantallas de 768px y termina en 998px
+$tablet-view          : ( small  : 768px );
+
+//funciona a partir de pantallas de 998px y termina en 1200px
+$laptop-view          : ( medium : 998px );
+
+//funciona a partir de pantallas de 1200px
+$desktop-view         : ( large  : 1200px );
+

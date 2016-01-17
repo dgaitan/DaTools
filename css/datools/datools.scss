@@ -1,0 +1,30 @@
+/*
+*	Datools by David Gaitán
+*/
+
+//Order of the library
+// 1. Mixins (functions)
+// 2. Variables (here are defined the variables of the library)
+// 3. Fonts (here are called the fonts from font-awesome 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+// 4. Normalize (here are defined the format of all HTML tags)
+// 5. Grid (This file contain all the core, here are the grid system)
+// 6. Flexbox (The same core, with the difference that this works with flexbox)
+// 7. Image (Simple format of the images)
+// 8. Inputs (Styles of the forms)
+// 9. Utils (Here are defined the simple utils as for the example the visibility or the align texts)
+// 10. Buttons (Four types of buttons)
+// 11. Menus (Simple style of menu)
+
+//import mixins
+@import "framework/mixins";
+
+@import "variables/variables";
+@import "framework/fonts";
+@import "framework/normalize";
+@import "framework/grid";
+@import "framework/flexbox";
+@import "framework/image";
+@import "framework/inputs";
+@import "framework/utils";
+@import "framework/buttons";
+@import "framework/menus";

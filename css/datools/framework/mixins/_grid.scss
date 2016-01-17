@@ -1,0 +1,147 @@
+
+
+//make the containers
+@mixin create-container($max-width, $padding, $flexbox, $status){
+
+	margin: 0 auto;
+	
+	@if $flexbox == true{
+
+		display: flex;
+		display: -webkit-flex;
+		flex-direction: row;
+		flex-direction: -webkit-row;
+		flex-wrap: wrap;
+		flex-wrap: -webkit-wrap;
+
+	} @else {
+
+		display: block;
+
+	}
+
+	@if $status == all{
+
+		width: 100%;
+		padding: 0px $padding;
+
+	} @else if $status == full {
+
+		width: 100%;
+
+	} @else {
+
+		max-width: $max-width;
+		padding: 0px $padding;	
+
+	}
+
+	@if $flexbox == false{
+		&:before, &:after{
+			clear: both;
+			content: "";
+			display: table;
+		}
+	}
+
+}
+
+//align grid column
+
+@mixin align-column($i, $align, $type, $flexbox){
+	
+	//type of columns
+	@if $type == five {
+		width: unquote($i * 5 + '%');
+	} @else {
+		width: percentage( $i / 12 );
+	}
+	//padding
+	padding: 0px $padding;
+	//type of align
+	@if $align == center {
+		margin: auto;
+	} @else if $align == left {
+		margin-right: auto;
+	} @else {
+		margin-left: auto;
+	}
+	//is flexbox? 
+	@if $flexbox == false{
+		float: initial;
+	}
+
+}
+
+
+//make phone view media query
+
+@mixin create-column($name, $value, $type, $flexbox, $padding){
+
+
+	//grid basado en porcentaje de 5 en 5
+	@if $type == five {
+		
+		@for $i from 1 through 20 {
+			.#{$name}-#{$i * 5}{
+				width: unquote($i * 5 + '%');
+				padding: 0px $padding;
+				@if $flexbox == false{
+					float: left;
+				}
+			}
+			//left-align
+			.#{$name}-left-#{$i * 5}{
+
+				@include align-column($i, left, five, $flexbox);
+				
+			}
+			//right-align
+			.#{$name}-right-#{$i * 5}{
+
+				@include align-column($i, right, five, $flexbox);
+
+			}
+			//center align
+			.#{$name}-center-#{$i * 5}{
+
+				@include align-column($i, center, five, $flexbox);
+
+			}
+
+		}
+	//grid basado en 12 rejillas
+	} @else {
+
+
+		@for $i from 1 through 12 {
+			.#{$name}-#{$i}{
+				width: percentage( $i / 12 );
+				padding: 0px $padding;
+				@if $flexbox == false{
+					float: left;
+				}
+			}
+			//left-align
+			.#{$name}-left-#{$i}{
+
+				@include align-column($i, left, twelve, $flexbox);
+				
+			}
+			//right-align
+			.#{$name}-right-#{$i}{
+
+				@include align-column($i, right, twelve, $flexbox);
+
+			}
+			//center align
+			.#{$name}-center-#{$i}{
+
+				@include align-column($i, center, twelve, $flexbox);
+
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+{
+	"name": "datools",
+	"description": "The simple front-end framework developed thinking in the simple and fast",
+	"version": "1.4",
+	"keywords": [
+		"css",
+		"sass",
+		"web-responsive",
+		"front-end",
+		"small",
+		"simple"
+	],
+	"author": "David Gaitan",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dgaitan/DaTools.git" 
+	},
+	"bugs": {
+		"url": "https://github.com/dgaitan/DaTools/issues"
+	},
+	"license": "MIT"
+
+}
