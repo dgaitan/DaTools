@@ -2,21 +2,18 @@
 *	Datools by David Gaitán
 */
 
-/*
-*	Orden de la librería
-*	
-*	1. Mixins
-*	2. Variables
-*	3. Fuentes e iconos
-*	4. normalize
-*	5. grid 
-*	6. flexbox
-	7. estilos de imagenes
-	8. estilos de inputs
-	9. utilidades
-	10. estilos de botones
-	11. estilos de menú(beta)
-*/
+//Order of the library
+// 1. Mixins (functions)
+// 2. Variables (here are defined the variables of the library)
+// 3. Fonts (here are called the fonts from font-awesome 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
+// 4. Normalize (here are defined the format of all HTML tags)
+// 5. Grid (This file contain all the core, here are the grid system)
+// 6. Flexbox (The same core, with the difference that this works with flexbox)
+// 7. Image (Simple format of the images)
+// 8. Inputs (Styles of the forms)
+// 9. Utils (Here are defined the simple utils as for the example the visibility or the align texts)
+// 10. Buttons (Four types of buttons)
+// 11. Menus (Simple style of menu)
 
 //import mixins
 @import "framework/mixins";

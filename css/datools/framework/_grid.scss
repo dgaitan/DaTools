@@ -1,5 +1,5 @@
 /*
-*	Grid versión 1.2
+*	Grid versión 1.4
 *	
 *	Contributors: David Gaitán.
 */
@@ -25,9 +25,15 @@
 
 @each $name, $value in $phone-view{
 
-	@include create-column($name, $value, five, false, $padding);
+	.container, .container-full, .container-all{
+	
+		@include create-column($name, $value, five, false, $padding);
+	
+	}
+	.grid-12{
 
-	@include create-column($name, $value, twelve, false, $padding);
+		@include create-column($name, $value, twelve, false, $padding);
+	}
 }
 
 /*Phone rotate views*/
@@ -36,9 +42,15 @@
 
 	@media (min-width: $value){
 
+		.container, .container-full, .container-all{
+	
 		@include create-column($name, $value, five, false, $padding);
+	
+		}
+		.grid-12{
 
-		@include create-column($name, $value, twelve, false, $padding);
+			@include create-column($name, $value, twelve, false, $padding);
+		}
 
 	}
 
@@ -50,9 +62,15 @@
 
 	@media (min-width: $value){
 
+		.container, .container-full, .container-all{
+	
 		@include create-column($name, $value, five, false, $padding);
+	
+		}
+		.grid-12{
 
-		@include create-column($name, $value, twelve, false, $padding);
+			@include create-column($name, $value, twelve, false, $padding);
+		}
 
 	}
 
@@ -64,10 +82,15 @@
 
 	@media (min-width: $value){
 
+		.container, .container-full, .container-all{
+	
 		@include create-column($name, $value, five, false, $padding);
+	
+		}
+		.grid-12{
 
-		@include create-column($name, $value, twelve, false, $padding);
-
+			@include create-column($name, $value, twelve, false, $padding);
+		}
 	}
 
 }
@@ -77,9 +100,15 @@
 
 	@media (min-width: $value){
 
+		.container, .container-full, .container-all{
+	
 		@include create-column($name, $value, five, false, $padding);
+	
+		}
+		.grid-12{
 
-		@include create-column($name, $value, twelve, false, $padding);
+			@include create-column($name, $value, twelve, false, $padding);
+		}
 
 	}
 

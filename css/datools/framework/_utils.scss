@@ -2,10 +2,10 @@
 	Margenes predefinidos
 */
 $margen-prefix : (
-	l :	$l-space,
-	m : $m-space,
-	s : $s-space,
-	li : $li-space
+	large :	$l-space,
+	medium : $m-space,
+	small : $s-space,
+	little : $li-space
 	);
 
 @each $prefix, $value in $margen-prefix{
@@ -55,4 +55,48 @@ $margen-prefix : (
 }
 .text-justify{
 	text-align: text-justify;
+}
+
+/*Limpiar los floats = clearfix*/
+
+.clearfix{
+	display: block;
+
+	&:before, &:after{
+		clear: both;
+		display: table;
+		content: "";
+	}
+
+}
+/*Flotantes*/
+
+.float-left{
+	float: left !important;
+}
+.float-right{
+	float: right !important;
+}
+.center-column{
+	margin: 0 auto;
+}
+/*visibilidad*/
+
+@media (max-width: 768px){
+	.hidden-little{display:none !important;}
+	.visible-little{display: block !important;}
+}
+
+@media (min-width: 768px) and (max-width: 998px){
+	.hidden-small{display: none !important;}
+	.visible-small{display: block !important;}
+}
+
+@media (min-width: 998px) and (max-width: 1200px){
+	.hidden-medium{display: none !important;}
+	.visible-medium{display: block !important;}
+}
+@media (min-width: 1200px){
+	.hidden-large{display: none !important;}
+	.visible-large{display: block !important;}
 }

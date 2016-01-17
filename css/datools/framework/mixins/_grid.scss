@@ -11,6 +11,8 @@
 		display: -webkit-flex;
 		flex-direction: row;
 		flex-direction: -webkit-row;
+		flex-wrap: wrap;
+		flex-wrap: -webkit-wrap;
 
 	} @else {
 
@@ -111,36 +113,33 @@
 	//grid basado en 12 rejillas
 	} @else {
 
-		.grid-12{
 
-			@for $i from 1 through 12 {
-				.#{$name}-#{$i}{
-					width: percentage( $i / 12 );
-					padding: 0px $padding;
-					@if $flexbox == false{
-						float: left;
-					}
-				}
-				//left-align
-				.#{$name}-left-#{$i}{
-
-					@include align-column($i, left, twelve, $flexbox);
-					
-				}
-				//right-align
-				.#{$name}-right-#{$i}{
-
-					@include align-column($i, right, twelve, $flexbox);
-
-				}
-				//center align
-				.#{$name}-center-#{$i}{
-
-					@include align-column($i, center, twelve, $flexbox);
-
+		@for $i from 1 through 12 {
+			.#{$name}-#{$i}{
+				width: percentage( $i / 12 );
+				padding: 0px $padding;
+				@if $flexbox == false{
+					float: left;
 				}
 			}
+			//left-align
+			.#{$name}-left-#{$i}{
 
+				@include align-column($i, left, twelve, $flexbox);
+				
+			}
+			//right-align
+			.#{$name}-right-#{$i}{
+
+				@include align-column($i, right, twelve, $flexbox);
+
+			}
+			//center align
+			.#{$name}-center-#{$i}{
+
+				@include align-column($i, center, twelve, $flexbox);
+
+			}
 		}
 
 	}

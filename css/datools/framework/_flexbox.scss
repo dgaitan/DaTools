@@ -1,6 +1,6 @@
 /*
 
-	Grid version 1 with flexbox
+	Grid version 1.1 with flexbox
 	author: David Gaitán
 
 */
@@ -21,50 +21,183 @@
 
 }
 
+/*
+	Propiedades flexbox
+*/
+
+//directions of the columns
+.row-reverse{
+	flex-direction: row-reverse;
+	flex-direction: -webkit-row-reverse;
+}
+.flex-column{
+	flex-direction: column;
+	flex-direction: -webkit-column;
+}
+.flex-column-reverse{
+	flex-direction: column-reverse;
+	flex-direction: -webkit-column-reverse;
+}
+
+//wrap of the columns
+.no-wrap{
+	flex-wrap: nowrap;
+	flex-wrap: -webkit-nowrap;
+}
+.wrap-reverse{
+	flex-wrap: wrap-reverse;
+	flex-wrap: -webkit-wrap-reverse;
+}
+
+//justify-content
+
+.justify-start{
+	justify-content: flex-start;
+	justify-content: -webkit-flex-start;
+}
+.justify-end{
+	justify-content: flex-end;
+	justify-content: -webkit-flex-end;
+}
+.justify-center{
+	justify-content: center;
+	justify-content: -webkit-center;
+}
+.justify-space-between{
+	justify-content: space-between;
+	justify-content: -webkit-space-between;
+}
+.justify-space-around{
+	justify-content: space-around;
+	justify-content: -webkit-space-around;
+}
+
+//align items
+
+.align-flex-start{
+	align-items: flex-start;
+	align-items: -webkit-flex-start;
+}
+.align-flex-end{
+	align-items: flex-end;
+	align-items: -webkit-flex-end;
+}
+.align-flex-center{
+	align-items: center;
+	align-items: -webkit-center;
+}
+.align-flex-stretch{
+	align-items: stretch;
+	align-items: -webkit-stretch;
+}
+.align-flex-baseline{
+	align-items: baseline;
+	align-items: -webkit-baseline;
+}
+
+//align content
+.align-content-start{
+	align-content: flex-start;
+	align-content: -webkit-flex-start;
+}
+.align-content-end{
+	align-content: flex-end;
+	align-content: -webkit-flex-end;
+}
+.align-content-center{
+	align-content: center;
+	align-content: -webkit-center;
+}
+.align-content-between{
+	align-content: space-between;
+	align-content: -webkit-space-between;
+}
+.align-content-around{
+	align-content: space-around;
+	align-content: -webkit-space-around;
+}
+.align-content-stretch{
+	align-content: stretch;
+	align-content: -webkit-stretch;
+}
+
 /*Phone views flexbox*/
 
 @each $name, $value in $phone-view{
 
-	@include create-column($name, $value, five, true, $padding);
+	.container-flex, .container-flex-all, .container-flex-full{
 
-	@include create-column($name, $value, twelve, true, $padding);
+		@include create-column($name, $value, five, true, $padding);
 
+	}
+
+	.grid-12-flex{
+
+		@include create-column($name, $value, twelve, true, $padding);
+	
+	}
 }
 
-/*Desktop views flexbox*/
+
+
+/*Phone rotate views flexbox*/
 @each $name, $value in $phone-rotate-view{
 
 	@media (min-width: $value){
 
-		@include create-column($name, $value, five, true, $padding);
+		.container-flex, .container-flex-all, .container-flex-full{
 
-		@include create-column($name, $value, twelve, true, $padding);
+			@include create-column($name, $value, five, true, $padding);
+
+		}
+
+		.grid-12-flex{
+
+			@include create-column($name, $value, twelve, true, $padding);
+		
+		}
 
 	}
 
 }
 
-/*Desktop views flexbox*/
+/*tablet views flexbox*/
 @each $name, $value in $tablet-view{
 
 	@media (min-width: $value){
 
-		@include create-column($name, $value, five, true, $padding);
+		.container-flex, .container-flex-all, .container-flex-full{
 
-		@include create-column($name, $value, twelve, true, $padding);
+			@include create-column($name, $value, five, true, $padding);
+
+		}
+
+		.grid-12-flex{
+
+			@include create-column($name, $value, twelve, true, $padding);
+		
+		}
 
 	}
 
 }
 
-/*Desktop views flexbox*/
+/*Laptop views flexbox*/
 @each $name, $value in $laptop-view{
 
 	@media (min-width: $value){
 
-		@include create-column($name, $value, five, true, $padding);
+		.container-flex, .container-flex-all, .container-flex-full{
 
-		@include create-column($name, $value, twelve, true, $padding);
+			@include create-column($name, $value, five, true, $padding);
+
+		}
+
+		.grid-12-flex{
+
+			@include create-column($name, $value, twelve, true, $padding);
+		
+		}
 
 	}
 
@@ -75,9 +208,17 @@
 
 	@media (min-width: $value){
 
-		@include create-column($name, $value, five, true, $padding);
+		.container-flex, .container-flex-all, .container-flex-full{
 
-		@include create-column($name, $value, twelve, true, $padding);
+			@include create-column($name, $value, five, true, $padding);
+
+		}
+
+		.grid-12-flex{
+
+			@include create-column($name, $value, twelve, true, $padding);
+		
+		}
 
 	}
 
