@@ -51,9 +51,12 @@
 			height: auto;
 			width: 100%;
 			left: 0;
+			background-color: #ccc;
+			z-index: 100;
 
 			li{
 				display: block;
+				width: 100%;
 			}
 		}
 		.toggle-button{
