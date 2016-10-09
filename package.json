@@ -1,23 +1,25 @@
 {
-	"name": "datools",
-	"description": "The simple front-end framework developed thinking in the simple and fast",
-	"version": "1.4",
-	"keywords": [
-		"css",
-		"sass",
-		"web-responsive",
-		"front-end",
-		"small",
-		"simple"
-	],
-	"author": "David Gaitan",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dgaitan/DaTools.git" 
-	},
-	"bugs": {
-		"url": "https://github.com/dgaitan/DaTools/issues"
-	},
-	"license": "MIT"
-
+  "name": "DaTools",
+  "version": "2.0.0",
+  "description": "Framework frontend to create websites and webapps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgaitan/DaTools.git"
+  },
+  "keywords": [],
+  "author": "David Gaitan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgaitan/DaTools/issues"
+  },
+  "homepage": "https://github.com/dgaitan/DaTools#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2"
+  }
 }

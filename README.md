@@ -1,5 +1,5 @@
 ## DaTools 
-Small libraries css
+Framework frontend to create websites and webapps.
 
 --------------------
 
