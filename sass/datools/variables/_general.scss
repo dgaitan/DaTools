@@ -55,9 +55,9 @@ $link-color: #4d84f3;
 
 
 $gray-color			: #dedede;
-$blue-color			: #4479e4;
-$red-color			: #c83c3c;
-$green-color		: #70b170;
+$blue-color			: #0E6EB8;
+$red-color			: #B03060;
+$green-color		: #016936;
 $black-color		: #202020;
 
 /**
@@ -184,9 +184,11 @@ $large-space	: $grid-padding + 30;
 $big-space		: $grid-padding + 40;
 
 
+
 /* Menu
    ========================================================================== */
 
-$menu-font-color		: #202020;
+$menu-font-color		: #505050;
 $menu-height			: 60px;
 $menu-brand-font-size	: 20px;
+$menu-back-color		: $blue-color !default;
