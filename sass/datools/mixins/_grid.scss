@@ -14,7 +14,7 @@
 }
 
 //create grid with the row
-//take from semantic ui :), something great
+//taked from semantic ui :), something great
 @mixin create-row-grid($columns) {
 
 	@for $i from 1 through $columns {
