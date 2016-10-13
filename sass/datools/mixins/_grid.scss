@@ -1,0 +1,97 @@
+/**
+ * Grid Mixins
+ */
+
+//create grid
+@mixin create-grid($prefix, $columns) {
+
+	@for $i from 1 through $columns {
+		&>.#{$prefix}-#{$i} {
+			width: percentage( $i / $columns );
+		}
+	} 
+
+}
+
+//create grid with the row
+//take from semantic ui :), something great
+@mixin create-row-grid($columns) {
+
+	@for $i from 1 through $columns {
+		&.columns-#{$i}{
+			&>.#{$column-name} {
+				width: 100 / $i + %;
+			}
+		}
+	}
+
+}
+
+@mixin create-breakpoint-row-grid($columns, $prefix) {
+
+	@for $i from 1 through $columns {
+		&.#{$prefix}-columns-#{$i}{
+			&>.#{$column-name} {
+				width: 100 / $i + %;
+			}
+		}
+	}
+
+}
+
+@mixin create-center-containers {
+	.#{$grid-container-name}-little{
+		max-width: $little-breakpoint;
+		margin: 0 auto;
+		padding-left: $grid-padding;
+		padding-right: $grid-padding;
+
+		@if ( $grid-system == float ) { @include clearfix; }
+	}
+
+	.#{$grid-container-name}-small{
+		max-width: $small-breakpoint;
+		margin: 0 auto;
+		padding-left: $grid-padding;
+		padding-right: $grid-padding;
+
+		@if ( $grid-system == float ) { @include clearfix; }
+	}
+
+	.#{$grid-container-name}-medium{
+		max-width: $medium-breakpoint;
+		margin: 0 auto;
+		padding-left: $grid-padding;
+		padding-right: $grid-padding;
+
+		@if ( $grid-system == float ) { @include clearfix; }
+	}
+
+	.#{$grid-container-name}-large{
+		max-width: $large-breakpoint;
+		margin: 0 auto;
+		padding-left: $grid-padding;
+		padding-right: $grid-padding;
+
+		@if ( $grid-system == float ) { @include clearfix; }
+	}
+
+	.#{$grid-container-name}-big{
+		max-width: $big-breakpoint;
+		margin: 0 auto;
+		padding-left: $grid-padding;
+		padding-right: $grid-padding;
+
+		@if ( $grid-system == float ) { @include clearfix; }
+	}
+}
+
+//offsets
+
+@mixin create-offset-column($prefix, $columns) {
+	@for $i from 1 through $columns {
+		&>.#{$prefix}-offset-#{$i} {
+			margin-left: percentage( $i / $columns );
+		}
+	}
+}

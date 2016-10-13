@@ -17,6 +17,14 @@ html {
   -webkit-text-size-adjust: 100%; /* 3 */
 }
 
+/**
+ * Box sizing border box
+ */
+
+* {
+  box-sizing: border-box;
+}
+
 /* Sections
    ========================================================================== */
 
@@ -33,6 +41,11 @@ body {
  */
 
 article,
+div,
+p,
+figcaption,
+figure,
+main,
 aside,
 footer,
 header,
@@ -41,29 +54,6 @@ section {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* Grouping content
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
- */
-
-figcaption,
-figure,
-main { /* 1 */
-  display: block;
-}
 
 /**
  * Add the correct margin in IE 8.
@@ -82,6 +72,9 @@ hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
+  border: 1px solid #ccc;
+  display: block;
+  margin: 15px 0;
 }
 
 /**
@@ -92,6 +85,7 @@ hr {
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+
 }
 
 /* Text-level semantics
@@ -105,6 +99,7 @@ pre {
 a {
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
+  text-decoration: none;
 }
 
 /**
@@ -231,6 +226,9 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%;
 }
 
 /**

@@ -1,0 +1,114 @@
+/**
+ * Buttons
+ */
+
+
+@if ($buttons-default-style == true) {
+
+	input[type="submit"],
+	button {
+		@include create-button;
+	}
+
+}
+
+@if ($buttons-default-style == false) {
+	.button {
+		@include create-button;
+	}	
+}
+
+//nested prefixs
+.button {
+	
+	//sizes
+	&.little {
+		padding: $button-little-padding;
+	}
+
+	&.small {
+		padding: $button-small-padding;
+	}
+
+	&.medium {
+		padding: $button-medium-padding;
+		font-size: 17px;
+	}
+
+	&.large {
+		padding: $button-large-padding;
+		font-size: 18px;
+	}
+
+	&.big {
+		padding: $button-big-padding;
+		font-size: 19px;
+	}
+
+	//colors
+	&.blue {
+		@include button-colors($blue-color);
+		color: #FFF;
+	}
+
+	&.red {
+		@include button-colors($red-color);
+		color: #FFF;	
+	}
+
+	&.green {
+		@include button-colors($green-color);
+		color: #FFF;	
+	}
+
+	&.black {
+		@include button-colors($black-color);
+		color: #FFF;	
+	}
+
+	//styles
+	&.outline {
+
+		&.blue {
+			@include button-outline($blue-color);			
+		}
+
+		&.red {
+			@include button-outline($red-color);			
+		}
+
+		&.green {
+			@include button-outline($green-color);			
+		}
+
+		&.black {
+			@include button-outline($black-color);			
+		}
+	}
+
+	&.radius {
+		border-radius: 50px;
+	}
+
+	&.bordered {
+
+		&.blue {
+			@include button-bordered($blue-color);			
+		}
+
+		&.red {
+			@include button-bordered($red-color);			
+		}
+
+		&.green {
+			@include button-bordered($green-color);			
+		}
+
+		&.black {
+			@include button-bordered($black-color);			
+		}
+
+	}
+
+
+}

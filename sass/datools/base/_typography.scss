@@ -1,0 +1,63 @@
+/**
+ * Typography variations styles
+ */
+
+body {
+	font-family: $body-font-family;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	font-weight: $body-weight;
+	overflow-x: hidden;
+}
+
+ul,
+ol,
+blockquote {
+	font-family: $body-font-family;
+}
+
+p{
+	line-height: $p-line-height;
+	margin-top: $p-margin;
+	margin-bottom: $p-margin;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $heading-weight;
+	margin-top: $heading-margin;
+	margin-bottom: $heading-margin;
+	line-height: $heading-line-height;
+}
+
+h1 {
+	font-size: $h1-font-size;
+}
+
+h2 {
+	font-size: $h2-font-size;
+}
+
+h3 {
+	font-size: $h3-font-size;
+}
+
+h4 {
+	font-size: $h4-font-size;
+}
+
+h5 {
+	font-size: $h5-font-size;
+}
+
+h6 {
+	font-size: $h6-font-size;
+}
+
+a{
+	color: $link-color;
+}

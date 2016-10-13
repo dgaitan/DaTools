@@ -1,0 +1,192 @@
+/**
+ * General Variables
+ */
+
+/* Grid System definitios
+   ========================================================================== */
+
+/**
+* Breakpoints
+*/
+
+/**
+ * Prefixs
+ * all devices = column
+ * little = smartphone
+ * small  = tablet
+ * medium = laptops
+ * large  = desktop
+ * big    = hd desktop
+ */
+$column-prefix			: column;
+$little-prefix			: little;
+$small-prefix			: small;
+$medium-prefix			: medium;
+$large-prefix			: large;
+$big-prefix				: big;
+
+// breakpoints size
+$little-breakpoint		: 480px;
+$small-breakpoint		: 768px;
+$medium-breakpoint		: 998px;
+$large-breakpoint		: 1200px;
+$big-breakpoint			: 1480px; 
+
+/**
+* Container values
+*/
+$grid-container-name	: container;
+$grid-container-width	: 1200px;
+
+/**
+* Grid variations
+*/
+
+$grid-columns			: 16;
+$grid-padding			: 15px;
+$row-name				: row;
+$column-name			: column;
+
+/**
+ * Colors Variables
+ */
+
+$link-color: #4d84f3;
+
+
+$gray-color			: #dedede;
+$blue-color			: #4479e4;
+$red-color			: #c83c3c;
+$green-color		: #70b170;
+$black-color		: #202020;
+
+/**
+ * Text Variables
+ */
+
+
+/* Font Family
+   ========================================================================== */
+
+/**
+* General font family
+*/
+$body-font-family 	: arial, sans-serif;
+
+/**
+* Paragraph font family
+*/
+$p-font-family 		: arial, sans-serif;
+
+/**
+* Heading Tags, for example h1 or h4
+*/
+$header-font-family : arial, sans-serif;
+
+/**
+* Navigation font family
+*/
+$nav-font-family 	: arial, sans-serif;
+
+/**
+* Buttons font family
+*/
+$button-font-family : arial, sans-serif;
+
+/**
+* Inputs font family
+*/
+$inputs-font-family : arial, sans-serif;
+
+
+/* Font Sizes
+========================================================================== */
+
+/**
+* General font size
+*/
+$body-font-size		: 16px;
+
+/**
+* Heading font size
+*/
+$h1-font-size 		: $body-font-size + 18;
+$h2-font-size		: $body-font-size + 15;
+$h3-font-size		: $body-font-size + 12;
+$h4-font-size		: $body-font-size + 9;
+$h5-font-size		: $body-font-size + 6;
+$h6-font-size		: $body-font-size + 3;
+
+/* Font Variations
+========================================================================== */	 	
+
+/**
+* Line Height
+*/
+$body-line-height	: 1.4;
+$heading-line-height: 1.2;
+$p-line-height		: 1.4;
+
+/**
+* Text Weight
+*/
+$body-weight		: 400;
+$heading-weight		: bold;
+$p-weight			: 400;
+
+/**
+* Text Margin
+*/
+$heading-margin		: 15px;
+$p-margin			: 10px;
+	
+
+
+/* Buttons
+   ========================================================================== */
+
+
+// general variables
+
+//font sizes
+$button-little-font-size		: $body-font-size;
+$button-small-font-size			: $body-font-size + 1.2;
+$button-medium-font-size		: $body-font-size + 1.4;
+$button-large-font-size			: $body-font-size + 1.8;
+$button-big-font-size			: $body-font-size + 2;
+
+//spaces
+$button-little-padding			: 8px 20px; 
+$button-small-padding			: 9px 25px;
+$button-medium-padding			: 11px 30px;
+$button-large-padding			: 12px 35px;
+$button-big-padding				: 14px 40px;
+
+
+$button-default-bg-color		: $gray-color;
+$button-default-hover-color		: darken($gray-color,10%);
+$button-default-font-size		: $button-little-font-size;
+$button-default-padding			: $button-little-padding;
+
+/* Form
+   ========================================================================== */
+
+$inputs-padding			: 10px 15px;
+
+
+/* Spaces
+   ========================================================================== */
+
+$little-space 	: $grid-padding;
+$small-space	: $grid-padding + 10;
+$medium-space	: $grid-padding + 20;
+$large-space	: $grid-padding + 30;
+$big-space		: $grid-padding + 40;
+
+
+/* Menu
+   ========================================================================== */
+
+$menu-font-color		: #202020;
+$menu-height			: 60px;
+$menu-brand-font-size	: 20px;

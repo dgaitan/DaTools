@@ -1,0 +1,234 @@
+/**
+ * Grid System
+ */
+
+/* Containers and rows
+   ========================================================================== */
+
+	@if ($grid-system == flexbox) {
+
+		.#{$grid-container-name}{
+			display: block;
+			max-width: $grid-container-width;
+			padding-left: $grid-padding;
+			padding-right: $grid-padding;
+			margin: 0 auto; 
+		}
+
+		.#{$grid-container-name}-full {
+			display: block;
+			width: 100%;
+			padding-left: $grid-padding;
+			padding-right: $grid-padding;
+		}
+
+		@include create-center-containers;
+
+
+		.#{$row-name}{
+			@include flexbox;
+			margin-left: -$grid-padding;
+			margin-right: -$grid-padding;
+
+			&>.#{$column-name}, &>div {
+				padding-left: $grid-padding;
+				padding-right: $grid-padding;
+				min-height: 5px;
+				position: relative;
+				width: 100%;
+			}
+
+			//mobile first, this is to smartphone and all devices
+			@include create-grid($column-prefix, $grid-columns);
+			@include create-offset-column($column-prefix, $grid-columns);
+			
+			//little screens
+			@media ( min-width: $little-breakpoint ) {
+				@include create-grid($little-prefix, $grid-columns);
+				@include create-offset-column($little-prefix, $grid-columns);
+			}
+
+
+			//small screens
+			@media ( min-width: $small-breakpoint ) {
+				@include create-grid($small-prefix, $grid-columns);
+				@include create-offset-column($small-prefix, $grid-columns);
+			}
+
+			//medium screens
+			@media ( min-width: $medium-breakpoint ) {
+				@include create-grid($medium-prefix, $grid-columns);
+				@include create-offset-column($medium-prefix, $grid-columns);
+			}
+
+			//large screens
+			@media ( min-width: $large-breakpoint ) {
+				@include create-grid($large-prefix, $grid-columns);
+				@include create-offset-column($large-prefix, $grid-columns);
+			}
+
+			//big screens
+			@media ( min-width: $big-breakpoint ) {
+				@include create-grid($big-prefix, $grid-columns);
+				@include create-offset-column($big-prefix, $grid-columns);
+			}
+		}
+
+	}
+
+		
+	@if ($grid-system == float) {
+
+		.#{$grid-container-name}{
+			display: block;
+			max-width: $grid-container-width;
+			padding-left: $grid-padding;
+			padding-right: $grid-padding;
+			margin: 0 auto; 
+
+			@include clearfix;
+		}
+
+		.#{$grid-container-name}-full {
+			display: block;
+			width: 100%;
+			padding-left: $grid-padding;
+			padding-right: $grid-padding;
+
+			@include clearfix;
+		}
+
+		@include create-center-containers;
+
+		.#{$row-name}{
+			display: block;
+			margin-left: -$grid-padding;
+			margin-right: -$grid-padding;
+
+			@include clearfix;
+
+			&>.#{$column-name}, &>div {
+				padding-left: $grid-padding;
+				padding-right: $grid-padding;
+				float: left;
+				min-height: 5px;
+				position: relative;
+				width: 100%;
+			}
+
+			//mobile first, this is to smartphone and all devices
+			@include create-grid($column-prefix, $grid-columns);
+			
+			//little screens
+			@media ( min-width: $little-breakpoint ) {
+				@include create-grid($little-prefix, $grid-columns);
+			}
+
+
+			//small screens
+			@media ( min-width: $small-breakpoint ) {
+				@include create-grid($small-prefix, $grid-columns);
+			}
+
+			//medium screens
+			@media ( min-width: $medium-breakpoint ) {
+				@include create-grid($medium-prefix, $grid-columns);
+			}
+
+			//large screens
+			@media ( min-width: $large-breakpoint ) {
+				@include create-grid($large-prefix, $grid-columns);
+			}
+
+			//big screens
+			@media ( min-width: $big-breakpoint ) {
+				@include create-grid($big-prefix, $grid-columns);
+			}
+		}
+
+	}
+
+/* Center
+   ========================================================================== */
+
+
+	
+
+/* Great grid variations 
+   ========================================================================== */
+
+	//columns size with the row
+
+	//to use this mode, just add the class prefix in the row , por example:
+	//<div class="row column-2"></div>
+	//this will to add a width 50% in the first div child.
+	.#{$row-name}{
+
+		@include create-row-grid($grid-columns);
+
+	}
+	
+	//columns size with the row and the breakpoints
+
+	//this mode permit modify the column using the breakpoints
+	//for example: <div class="row column-2 medium-column-4"></div>
+	//when this prefix medium-column-4, will to add a width 25% in the first div child
+	//and this is valid in the min-width: $medium-breakpoint
+
+	//little-screens
+	@media (min-width: $little-breakpoint) {
+		.#{$row-name}{
+
+			@include create-breakpoint-row-grid($grid-columns, $little-prefix);
+
+		}	
+	}
+
+	//small-screens
+	@media (min-width: $small-breakpoint) {
+		.#{$row-name}{
+
+			@include create-breakpoint-row-grid($grid-columns, $small-prefix);
+
+		}	
+	}
+
+	//medium-screens
+	@media (min-width: $medium-breakpoint) {
+		.#{$row-name}{
+
+			@include create-breakpoint-row-grid($grid-columns, $medium-prefix);
+
+		}	
+	}
+
+	//large-screens
+	@media (min-width: $large-breakpoint) {
+		.#{$row-name}{
+
+			@include create-breakpoint-row-grid($grid-columns, $large-prefix);
+
+		}	
+	}
+
+	//big-screens
+	@media (min-width: $big-breakpoint) {
+		.#{$row-name}{
+
+			@include create-breakpoint-row-grid($grid-columns, $big-prefix);
+
+		}	
+	}
+
+	// become all columns to 100% in smartphones
+	.#{$row-name}.#{$row-name}-break{
+
+		@media (max-width: $little-breakpoint) {
+
+			&>.#{$column-name}{
+				width: 100%;
+			}
+
+		}
+
+	}

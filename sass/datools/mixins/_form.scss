@@ -1,0 +1,35 @@
+/**
+* Forms Mixins
+*/
+
+@mixin create-inputs-style {
+	
+	background-color: transparent;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	padding: $inputs-padding;
+	color: #202020;
+	font-size: $body-font-size;
+	width: 100%;
+	margin-bottom: $grid-padding;
+	outline: 0;
+	transition: all .3s;
+
+	&:focus {
+		border: 1px solid #505050;
+	}
+
+}
+
+@mixin create-form-grid($field-name, $columns) {
+
+	@for $i from 1 through $columns {
+
+		.#{$field-name}-#{$i} {
+			width: 100 / $i + %;
+			
+		}
+
+	}
+
+}

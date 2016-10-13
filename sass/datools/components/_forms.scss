@@ -1,0 +1,67 @@
+/**
+* Forms
+*/
+
+@if ($inputs-default-style == true) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="date"],
+	select,
+	textarea {
+		@include create-inputs-style;
+	}
+}
+
+@if ($inputs-default-style == false) {
+
+	.input {
+		@include create-inputs-style;
+	}
+
+}
+
+.form {
+
+	margin-left: -$grid-padding;
+	margin-right: -$grid-padding;
+	display: flex;
+	flex-wrap: wrap;
+
+	&>div {
+		width: 100%;
+		padding-left: $grid-padding;
+		padding-right: $grid-padding;
+
+		label {
+			font-size: 15px;
+			font-weight: bold;
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+
+	&>.error {
+		label {
+			color: $red-color;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="search"],
+		input[type="number"],
+		input[type="date"],
+		select,
+		textarea {
+			color: $red-color;
+			border: 1px solid $red-color;
+		}
+	}
+
+	@include create-form-grid(field, 6);
+
+}

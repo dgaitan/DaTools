@@ -1,0 +1,41 @@
+/**
+ * Text Helpers
+ */
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text {
+	&.center {
+		text-align: center;
+	}
+
+	&.right {
+		text-align: right;
+	}
+
+	&.left {
+		text-align: left;
+	}
+
+	&.upcase {
+		text-transform: uppercase;
+	}
+
+	&.lowcase {
+		text-transform: lowercase;
+	}
+
+	&.capitalize {
+		text-transform: capitalize;
+	}
+}

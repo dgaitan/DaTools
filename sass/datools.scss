@@ -4,19 +4,28 @@
  * Enjoy with resposability :)
  */
 
+
+//variables
+@import 'datools/variables/enviroment';
+@import 'datools/variables/general';
+
 //base
 @import 'datools/base/reset';
 @import 'datools/base/typography';
 
-//variables
-@import 'datools/variables/general';
-@import 'datools/variables/grid';
-@import 'datools/variables/colors';
-@import 'datools/variables/spaces';
-@import 'datools/variables/text';
-
 //mixins
+@import 'datools/mixins/utils';
 @import 'datools/mixins/grid';
+@import 'datools/mixins/fonts';
+@import 'datools/mixins/flexbox';
+@import 'datools/mixins/buttons';
+@import 'datools/mixins/form';
+@import 'datools/mixins/menu';
+
+//components
+@import 'datools/components/buttons';
+@import 'datools/components/forms';
+@import 'datools/components/menu';
 
 //helpers
 @import 'datools/helpers/flexbox';
