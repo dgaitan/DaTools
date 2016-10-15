@@ -7,7 +7,7 @@ const gulp = require('gulp'),
 
 //compile sass
 gulp.task('sass', function(){
-	return gulp.src('./sass/**/*.scss')
+	return gulp.src('./lib/sass/**/*.scss')
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
 		.pipe(autoprefixer({ browsers: ['last 2 versions', 'not ie <= 8', 'Firefox > 20'] }))
 		.pipe(gulp.dest('./css'));
@@ -15,7 +15,7 @@ gulp.task('sass', function(){
 
 //minify js
 gulp.task('minify', function(){
-	return gulp.src('./js-vendors/*.js')
+	return gulp.src('./lib/js-vendors/*.js')
 		.pipe(uglify())
 		.pipe(concat('datools.js'))
 		.pipe(gulp.dest('./js'));
@@ -28,6 +28,7 @@ gulp.task('default', function(){
 	});
 	gulp.watch('./*html').on('change', browser.reload);
 	gulp.watch('./css/*.css').on('change', browser.reload);
-	gulp.watch('./js-vendors/*.js', ['minify']);
-	gulp.watch('./sass/**/*.scss', ['sass']);
+	gulp.watch('./js/*.js').on('change', browser.reload);
+	gulp.watch('./lib/js-vendors/*.js', ['minify']);
+	gulp.watch('./lib/sass/**/*.scss', ['sass']);
 });

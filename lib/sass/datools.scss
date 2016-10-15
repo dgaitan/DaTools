@@ -4,6 +4,7 @@
  * Enjoy with responsability :)
  */
 
+//vendor
 
 //variables
 @import 'datools/variables/enviroment';
@@ -12,6 +13,12 @@
 //base
 @import 'datools/base/reset';
 @import 'datools/base/typography';
+
+//import here your vendors
+@import 'datools/vendor/mmenu/menu';
+@import 'datools/vendor/slick/slick';
+@import 'datools/vendor/slick/slick-theme';
+@import 'datools/vendor/magnific-popup/magnific';
 
 //mixins
 @import 'datools/mixins/utils';
@@ -23,6 +30,7 @@
 @import 'datools/mixins/menu';
 
 //components
+@import 'datools/components/icons';
 @import 'datools/components/buttons';
 @import 'datools/components/forms';
 @import 'datools/components/menu';
@@ -48,6 +56,4 @@
 @import 'datools/pages/theme';
 @import 'datools/pages/admin';
 
-//vendor
-//import here your vendors
-@import 'datools/vendor/mmenu/menu';
+
